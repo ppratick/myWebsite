@@ -1,187 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratick Kafley's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("E7kHvjg7UEViV5X3z");
-        })();
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pratick Kafley's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("E7kHvjg7UEViV5X3z");
+    })();
+  </script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="home">
-        <img src="images/profilePic.jpg" alt="Profile Picture" class="profile-picture">
-        <div class="intro-text">
-            <h2>Hello I'm Pratick, a student at Carnegie Mellon University</h2>
-            <h2>Studying Computer Science</h2>
-            <a href="https://linkedin.com/in/pratick-k" target="_blank" class="linkedin-button">
-                <img src="images/linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
-            </a>
-        </div>
-    </section>
+  <!-- HOME SECTION -->
+  <section id="home">
+    <img src="images/profilePic.jpg" alt="Profile Picture" class="profile-picture" />
+    <div class="intro-text">
+      <h2>Hello, I'm Pratick, a Computer Science student at Carnegie Mellon University</h2>
+      <!-- Social Buttons: LinkedIn & GitHub -->
+      <div class="social-buttons">
+        <a
+          href="https://linkedin.com/in/pratick-k"
+          target="_blank"
+          class="linkedin-button"
+        >
+          <img src="images/linkedin.png" alt="LinkedIn Logo" class="social-logo" />
+        </a>
+        <a
+          href="https://github.com/ppratick"
+          target="_blank"
+          class="linkedin-button"
+        >
+          <img src="images/githubt.png" alt="GitHub Logo" class="social-logo" />
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <div class="project-info">
-                <h3>The Ultimate Golazo</h3>
-                <p>Made with: Python</p>
-                <p>The Ultimate Golazo is a Python-based soccer simulation game inspired by FIFA, featuring realistic ball physics, player movements, and a challenging AI opponent. Utilizing object-oriented programming and CMU Graphics, the game offers strategic gameplay where players can control a team and compete against an AI opponent. The project faced challenges in AI development and physics simulation, but resulted in an engaging and immersive experience. Future enhancements include multiplayer functionality, improved AI, and additional game modes for a richer user experience.</p>
-                <a href="https://www.youtube.com/watch?v=-rZ5iOyUUQY" target="_blank"><button>YouTube</button></a>
-            </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-rZ5iOyUUQY?si=7AVVxsheG8MDvPme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="project">
-            <div class="project-info">
-                <h3>Crosshair</h3>
-                <p>Made with: APRIL Tag, Arduino, C++, GitHub, Linux, OpenCV, Python, Ubuntu, VSCode</p>
-                <p>Crosshair uses APRIL Tags and advanced computer vision to autonomously navigate and assemble components, minimizing human intervention. Using a modified ELEGOO Smart Robot Car Kit, we achieved precise and adaptive pathfinding. Despite challenges in motor control and vision accuracy, our solution demonstrated remarkable precision, consistently aligning objects within one inch. Future plans include integrating a Raspberry Pi for complete autonomy and expanding the technology to various robotic applications, including zero-gravity environments.</p>
-                <a href="https://www.youtube.com/watch?v=Bcm44azlQFQ" target="_blank"><button>YouTube</button></a>
-                <a href="https://devpost.com/software/crosshair" target="_blank"><button>Devpost</button></a>
-                <a href="https://github.com/ChromeUniverse/hackcmu-wteam" target="_blank"><button>GitHub</button></a>
-            </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Bcm44azlQFQ" title="HackCMU   SD 480p" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <p>
+        I’m a second-year Computer Science student at Carnegie Mellon University, originally from Nepal and now based in Springfield, MA. I’m passionate about solving real-world problems through technology and innovation, blending my technical expertise with a growing understanding of business through a minor in Business Administration. At CMU, I’m constantly exploring new technologies and collaborating on meaningful projects that push the boundaries of what’s possible.
+      </p>
+      <h3>What I’m Currently Learning</h3>
+      <ul>
+        <li>Functional programming with SML</li>
+        <li>Advanced Git workflows and open-source collaboration</li>
+        <li>Software engineering best practices, system design, and scalability</li>
+      </ul>
+      <h3>Beyond the Code</h3>
+      <p>
+        When I’m not coding, you’ll find me staying active—whether it’s playing soccer, swimming, or watching a game. I’m a die-hard FC Barcelona fan and also support the Boston Celtics.
+      </p>
+    </div>
+  </section>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <img src="images/c.png" alt="C Logo">
-                <p>C</p>
-            </div>
-            <div class="skill">
-                <img src="images/c++.png" alt="C++ Logo">
-                <p>C++</p>
-            </div>
-            <div class="skill">
-                <img src="images/java.png" alt="Java Logo">
-                <p>Java</p>
-            </div>
-            <div class="skill">
-                <img src="images/javascript.png" alt="JavaScript Logo">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <img src="images/python.png" alt="Python Logo">
-                <p>Python</p>
-            </div>
-            <div class="skill">
-                <img src="images/html.png" alt="HTML Logo">
-                <p>HTML</p>
-            </div>
-            <div class="skill">
-                <img src="images/css.png" alt="CSS Logo">
-                <p>CSS</p>
-            </div>
-            <div class="skill">
-                <img src="images/latex.png" alt="LaTeX Logo">
-                <p>LaTeX</p>
-            </div>
-            <div class="skill">
-                <img src="images/arduino.png" alt="Arduino Logo">
-                <p>Arduino</p>
-            </div>
-            <div class="skill">
-                <img src="images/github.png" alt="GitHub Logo">
-                <p>GitHub</p>
-            </div>
-            <div class="skill">
-                <img src="images/linux.png" alt="Linux Logo">
-                <p>Linux</p>
-            </div>
-            <div class="skill">
-                <img src="images/command-line.png" alt="Unix Commands Logo">
-                <p>Unix Commands</p>
-            </div>
-        </div>
-    </section>
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>My Projects</h2>
 
-    <section id="experience">
-        <h2>My Experience</h2>
-        <div class="job">
-            <div class="job-info">
-                <h3>Brand Representative</h3>
-                <p>Hollister Co.</p>
-                <p>At Hollister, I efficiently managed inventory, ensured timely restocking of merchandise, and provided customer support, consistently exceeding weekly targets by 15%. Through exceptional customer service and product selection assistance, I maintained a 95% customer satisfaction rate. Additionally, I played a key role in training new employees, significantly enhancing team performance and fostering a positive work environment.</p>
-                <p>May 2024 – Present</p>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="job">
-            <div class="job-info">
-                <h3>Virtual Fellow</h3>
-                <p>Snap Inc.</p>
-                <p>As a Virtual Fellow at the Snap Global Office Hours Fellowship, I sharpened my leadership and cross-cultural collaboration skills through mentorship and interactive workshops. Partnering with international peers, I developed innovative solutions to real-world challenges, thereby improving my global communication and project management abilities.</p>
-                <p>March 2024 – April 2024</p>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="job">
-            <div class="job-info">
-                <h3>Sales Consultant</h3>
-                <p>The Men’s Wearhouse</p>
-                <p>As a Sales Consultant at The Men's Wearhouse, I delivered custom fitting services to over 250 customers, significantly boosting satisfaction and increasing sales by 15%. I also formulated effective merchandising strategies and trained new employees, contributing to enhanced team performance and an outstanding customer experience.</p>
-                <p>May 2022 – August 2023</p>
-            </div>
-        </div>
-    </section>
+    <!-- The Ultimate Golazo -->
+    <div class="project">
+      <div class="project-info">
+        <h3>The Ultimate Golazo</h3>
+        <p>Made with: Python</p>
+        <p>
+          The Ultimate Golazo is a Python-based soccer simulation game inspired by FIFA, featuring realistic ball physics,
+          player movements, and a challenging AI opponent. Utilizing object-oriented programming and CMU Graphics, the
+          game offers strategic gameplay where players can control a team and compete against an AI opponent. The project
+          faced challenges in AI development and physics simulation, but resulted in an engaging and immersive
+          experience. Future enhancements include multiplayer functionality, improved AI, and additional game modes for
+          a richer user experience.
+        </p>
+        <a
+          href="https://www.youtube.com/watch?v=-rZ5iOyUUQY"
+          target="_blank"
+        ><button>YouTube</button></a>
+        <a
+          href="https://github.com/ppratick/The-Ultimate-Golazo"
+          target="_blank"
+        ><button>GitHub</button></a>
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/-rZ5iOyUUQY?si=7AVVxsheG8MDvPme"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-    <section id="education">
-        <h2>My Education</h2>
-        <div class="education">
-            <img src="images/cmu.png" alt="CMU Logo" class="edu-logo">
-            <div class="education-info">
-                <h3>Carnegie Mellon University</h3>
-                <p>Major in Computer Science</p>
-                <p>Minor in Business Administration</p>
-                <p>Anticipated Graduation: 2027</p>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="education">
-            <img src="images/central.png" alt="Springfield Central Logo" class="edu-logo">
-            <div class="education-info">
-                <h3>Springfield Central High School</h3>
-                <p>High School Diploma</p>
-                <p>Graduated: 2023</p>
-                <p>GPA: 4.61</p>
-                <p>Salutatorian</p>
-            </div>
-        </div>
-    </section>
+    <!-- Crosshair -->
+    <div class="project">
+      <div class="project-info">
+        <h3>Crosshair</h3>
+        <p>Made with: APRIL Tag, Arduino, C++, GitHub, Linux, OpenCV, Python, Ubuntu, VSCode</p>
+        <p>
+          Crosshair uses APRIL Tags and advanced computer vision to autonomously navigate and assemble components,
+          minimizing human intervention. Using a modified ELEGOO Smart Robot Car Kit, we achieved precise and adaptive
+          pathfinding. Despite challenges in motor control and vision accuracy, our solution demonstrated remarkable
+          precision, consistently aligning objects within one inch. Future plans include integrating a Raspberry Pi for
+          complete autonomy and expanding the technology to various robotic applications, including zero-gravity
+          environments.
+        </p>
+        <a href="https://www.youtube.com/watch?v=Bcm44azlQFQ" target="_blank"
+          ><button>YouTube</button></a
+        >
+        <a href="https://devpost.com/software/crosshair" target="_blank"
+          ><button>Devpost</button></a
+        >
+        <a href="https://github.com/ChromeUniverse/hackcmu-wteam" target="_blank"
+          ><button>GitHub</button></a
+        >
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Bcm44azlQFQ"
+        title="HackCMU   SD 480p"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Please contact me directly at <a href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a> or through this form.</p>
-        <form id="contact-form">
-            <input type="email" name="user_email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit">Submit <span>&#x27A1;</span></button>
-        </form>
-    </section>
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h2>My Skills</h2>
 
-    <script src="script.js"></script>
+    <!-- Programming Languages -->
+    <div class="skills-category">
+      <h3>Programming Languages</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="images/c.png" alt="C Logo" />
+          <p>C</p>
+        </div>
+        <div class="skill">
+          <img src="images/c++.png" alt="C++ Logo" />
+          <p>C++</p>
+        </div>
+        <div class="skill">
+          <img src="images/python.png" alt="Python Logo" />
+          <p>Python</p>
+        </div>
+        <div class="skill">
+          <img src="images/java.png" alt="Java Logo" />
+          <p>Java</p>
+        </div>
+        <div class="skill">
+          <img src="images/html.png" alt="HTML Logo" />
+          <p>HTML</p>
+        </div>
+        <div class="skill">
+          <img src="images/css.png" alt="CSS Logo" />
+          <p>CSS</p>
+        </div>
+        <div class="skill">
+          <img src="images/javascript.png" alt="JavaScript Logo" />
+          <p>JavaScript</p>
+        </div>
+        <div class="skill">
+          <img src="images/sml.png" alt="SML Logo" />
+          <p>SML</p>
+        </div>
+        <div class="skill">
+          <img src="images/nodejs.png" alt="Node.js Logo" />
+          <p>Node.js</p>
+        </div>
+        <div class="skill">
+          <img src="images/julia.png" alt="Julia Logo" />
+          <p>Julia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Development Tools -->
+    <div class="skills-category">
+      <h3>Development Tools</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="images/github.png" alt="Git Logo" />
+          <p>Git</p>
+        </div>
+        <div class="skill">
+          <img src="images/vscode.png" alt="VSCode Logo" />
+          <p>VSCode</p>
+        </div>
+        <div class="skill">
+          <img src="images/arduino.png" alt="Arduino IDE Logo" />
+          <p>Arduino IDE</p>
+        </div>
+        <div class="skill">
+          <img src="images/command-line.png" alt="Unix Commands Logo" />
+          <p>Unix Commands</p>
+        </div>
+        <div class="skill">
+          <img src="images/figma.png" alt="Figma Logo" />
+          <p>Figma</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Microsoft Tools -->
+    <div class="skills-category">
+      <h3>Microsoft Tools</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="images/excel.png" alt="Excel Logo" />
+          <p>Excel</p>
+        </div>
+        <div class="skill">
+          <img src="images/office.png" alt="Office Logo" />
+          <p>Office</p>
+        </div>
+        <div class="skill">
+          <img src="images/powera.png" alt="Power Automate Logo" />
+          <p>Power Automate</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificates -->
+    <div class="skills-category">
+      <h3>Certificates</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="images/isc2.png" alt="ISC2 Logo" />
+          <p>Certified in Cybersecurity – ISC2</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <h2>My Experience</h2>
+
+    <div class="job">
+      <div class="job-info">
+        <h3>Brand Representative</h3>
+        <p>Hollister Co.</p>
+        <p>May 2024 – August 2024</p>
+        <p>
+          At Hollister, I efficiently managed inventory, ensured timely restocking of merchandise, and provided customer
+          support, consistently exceeding weekly targets by 15%. Through exceptional customer service and product
+          selection assistance, I maintained a 95% customer satisfaction rate. Additionally, I played a key role in
+          training new employees, significantly enhancing team performance and fostering a positive work environment.
+        </p>
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <div class="job">
+      <div class="job-info">
+        <h3>Virtual Fellow</h3>
+        <p>Snap Inc.</p>
+        <p>March 2024 – April 2024</p>
+        <p>
+          As a Virtual Fellow at the Snap Global Office Hours Fellowship, I sharpened my leadership and cross-cultural
+          collaboration skills through mentorship and interactive workshops. Partnering with international peers, I
+          developed innovative solutions to real-world challenges, thereby improving my global communication and
+          project management abilities.
+        </p>
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <div class="job">
+        <div class="job-info">
+          <h3>Math & Python Tutor</h3>
+          <p>Springfield Public Schools</p>
+          <p>August 2021 – May 2023</p>
+          <p>
+            As a Math & Python Tutor at Springfield Public Schools, I supported students in calculus, pre-calculus, algebra 1/2, and geometry, helping them improve their academic performance. Additionally, I provided instruction in Python, focusing on various libraries, which enhanced students' coding skills and deepened their understanding of programming concepts.
+          </p>
+        </div>
+      </div>
+      <div class="line"></div>
+
+    <div class="job">
+      <div class="job-info">
+        <h3>Sales Consultant</h3>
+        <p>The Men’s Wearhouse</p>
+        <p>May 2022 – August 2023</p>
+        <p>
+          As a Sales Consultant at The Men's Wearhouse, I delivered custom fitting services to over 250 customers,
+          significantly boosting satisfaction and increasing sales by 15%. I also formulated effective merchandising
+          strategies and trained new employees, contributing to enhanced team performance and an outstanding customer
+          experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education">
+    <h2>My Education</h2>
+
+    <div class="education">
+      <img src="images/cmu.png" alt="CMU Logo" class="edu-logo" />
+      <div class="education-info">
+        <h3>Carnegie Mellon University</h3>
+        <p>Major in Computer Science</p>
+        <p>Minor in Business Administration</p>
+        <p>Anticipated Graduation: 2027</p>
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <div class="education">
+      <img src="images/central.png" alt="Springfield Central Logo" class="edu-logo" />
+      <div class="education-info">
+        <h3>Springfield Central High School</h3>
+        <p>High School Diploma</p>
+        <p>Graduated: 2023</p>
+        <p>GPA: 4.61</p>
+        <p>Salutatorian</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Please contact me directly at
+      <a href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a> or through this form.
+    </p>
+    <form id="contact-form">
+      <input type="email" name="user_email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">
+        Submit <span>&#x27A1;</span>
+      </button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

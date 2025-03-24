@@ -1,3 +1,4 @@
+/* BASIC RESET & GLOBAL STYLING */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,9 +6,10 @@ body {
     box-sizing: border-box;
     background-color: rgb(18, 24, 38);
     color: rgb(255, 255, 255);
-}
-
-header {
+  }
+  
+  /* HEADER & NAVIGATION */
+  header {
     width: auto;
     position: fixed;
     top: 10px;
@@ -21,51 +23,68 @@ header {
     border-radius: 50px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     margin: 0 0.5rem;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: rgb(210, 213, 218);
     text-decoration: none;
     padding: 10px 20px;
     display: block;
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
     background: rgb(210, 213, 218);
     color: rgb(18, 24, 38);
     transform: scale(1.1);
     box-shadow: 0 0 10px rgb(210, 213, 218);
-}
-
-section {
+  }
+  
+  /* SECTIONS */
+  section {
     padding: 5rem 1rem;
     text-align: center;
-}
-
-#home {
+  }
+  
+  /* HOME SECTION */
+  #home {
     background: url('images/background.png') no-repeat center center;
     background-size: cover;
     position: relative;
+    min-height: 70vh;
     padding: 5rem 1rem;
     margin-top: 0;
-}
-
-#home::before {
+  }
+  
+  /* Social Buttons Container (LinkedIn & GitHub) */
+  .social-buttons {
+    display: inline-flex;
+    gap: 1rem;
+    margin-top: 20px;
+  }
+  
+  /* Make both icons the same size */
+  .social-logo {
+    width: 100px;
+    height:25px;
+    display: block;
+  }
+  
+  #home::before {
     content: '';
     position: absolute;
     top: 0;
@@ -73,9 +92,9 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.profile-picture {
+  }
+  
+  .profile-picture {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -83,18 +102,18 @@ section {
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
-}
-
-.intro-text {
+  }
+  
+  .intro-text {
     font-size: 2rem;
     line-height: 1.5;
     text-align: center;
     margin-top: 20px;
     position: relative;
     z-index: 1;
-}
-
-.linkedin-button {
+  }
+  
+  .linkedin-button {
     display: inline-block;
     margin-top: 20px;
     padding: 1rem 2rem;
@@ -104,31 +123,61 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     z-index: 1;
-}
-
-.linkedin-button:hover {
+  }
+  
+  .linkedin-button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(9, 11, 32, 0.7);
-}
-
-.linkedin-logo {
+  }
+  
+  .linkedin-logo {
     width: 100px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-h2 {
+  }
+  
+  /* HEADINGS */
+  h2 {
     color: rgb(227, 227, 230);
     margin-bottom: 2rem;
     font-weight: normal;
     font-size: 2rem;
-}
-
-#projects .project,
-#experience .job,
-#education .education {
+  }
+  
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ABOUT SECTION */
+  #about .about {
+    border: none;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    width: 80%;
+    background-color: rgb(27, 34, 54);
+    color: rgb(212, 213, 216);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  #about .about:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff;
+  }
+  
+  #about .about p {
+    margin-bottom: 1rem;
+  }
+  
+  /* PROJECTS, EXPERIENCE, EDUCATION CARDS */
+  #projects .project,
+  #experience .job,
+  #education .education {
     border: none;
     padding: 1.5rem;
     margin: 2rem auto;
@@ -140,99 +189,121 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover,
-.job:hover,
-.education:hover {
+    text-align: left;
+  }
+  
+  /* White glow + scale on hover for these sections */
+  #projects .project:hover,
+  #experience .job:hover,
+  #education .education:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(212, 213, 216, 0.7);
-}
-
-.project,
-.job,
-.education {
+    box-shadow: 0 0 20px #ffffff;
+  }
+  
+  .project,
+  .job,
+  .education {
     display: flex;
     justify-content: space-between;
-    text-align: left;
     flex-wrap: wrap;
-}
-
-.project-info,
-.job-info,
-.education-info {
+  }
+  
+  .project-info,
+  .job-info,
+  .education-info {
     flex: 1;
     margin-right: 20px;
-}
-
-.line {
+  }
+  
+  .line {
     width: 4px;
     height: 50px;
     background-color: rgb(65, 70, 81);
     margin: 20px auto;
-}
-
-.edu-logo {
+  }
+  
+  .edu-logo {
     width: 200px;
     height: auto;
     align-self: flex-start;
     margin-left: auto;
     margin-right: 20px;
-}
-
-iframe {
+  }
+  
+  iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
-}
-
-#skills ul {
+  }
+  
+  /* SKILLS SECTION */
+  #skills ul {
     list-style: none;
     padding: 0;
     text-align: center;
-}
-
-#skills .skills-container {
+  }
+  
+  .skills-category {
+    margin-bottom: 2rem;
+  }
+  
+  .skills-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(227, 227, 230);
+  }
+  
+  .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     max-width: 600px;
-    margin: 0 auto;
-    border: none;
-    padding: 1.5rem;
     margin: 2rem auto;
+    padding: 1.5rem;
     background-color: rgb(27, 34, 54);
     color: rgb(212, 213, 216);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill {
+  }
+  
+  /* White glow + scale on hover for the entire skill container */
+  .skills-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff;
+  }
+  
+  .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill:hover {
+    cursor: pointer;
+  }
+  
+  /* Individual skill hover effect */
+  .skill:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-}
-
-.skill img {
+  }
+  
+  .skill img {
     width: 50px;
     height: 50px;
-}
-
-.skill p {
+  }
+  
+  .skill p {
     margin-top: 5px;
     font-size: 1.25rem;
-}
-
-button {
+  }
+  
+  /* BUTTONS */
+  button {
     padding: 0.5rem 1rem;
     background-color: #0056b3;
     color: white;
@@ -240,23 +311,24 @@ button {
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #003f7f;
     transform: scale(1.1);
     box-shadow: 0 0 10px #0056b3;
-}
-
-#contact form {
+  }
+  
+  /* CONTACT SECTION */
+  #contact form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
-
-#contact input,
-#contact textarea {
+  }
+  
+  #contact input,
+  #contact textarea {
     width: 80%;
     padding: 1rem;
     border-radius: 15px;
@@ -264,65 +336,66 @@ button:hover {
     background-color: rgb(8, 11, 23);
     color: rgb(210, 213, 218);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#contact input:hover,
-#contact textarea:hover {
+  }
+  
+  #contact input:hover,
+  #contact textarea:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(210, 213, 218, 0.7);
-}
-
-#contact input::placeholder,
-#contact textarea::placeholder {
+  }
+  
+  #contact input::placeholder,
+  #contact textarea::placeholder {
     color: rgb(210, 213, 218);
-}
-
-#contact textarea {
+  }
+  
+  #contact textarea {
     height: 500px;
-}
-
-#contact a {
+  }
+  
+  #contact a {
     color: rgb(255, 255, 255);
     text-decoration: underline;
-}
-
-#contact button {
+  }
+  
+  #contact button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     background-color: rgb(8, 11, 23);
     color: rgb(210, 213, 218);
-}
-
-#contact button:hover {
+  }
+  
+  #contact button:hover {
     background-color: rgb(27, 34, 54);
     transform: scale(1.1);
     box-shadow: 0 0 10px rgb(8, 11, 23);
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
     header {
-        display: none;
+      display: none;
     }
-
+  
     section {
-        padding: 3rem 1rem;
-        margin-top: 3rem;
+      padding: 3rem 1rem;
+      margin-top: 3rem;
     }
-
+  
     .intro-text {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-
+  
     h2 {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-
+  
     .linkedin-button {
-        padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
     }
-
+  
     .linkedin-logo {
-        width: 80px;
+      width: 80px;
     }
-}
+  }

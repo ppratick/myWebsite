@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(18, 24, 38);
+    color: rgb(255, 255, 255);
+}
+
+header {
+    width: auto;
+    position: fixed;
+    top: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(8, 11, 23, 0.8);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    color: rgb(210, 213, 218);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: rgb(210, 213, 218);
+    color: rgb(18, 24, 38);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(210, 213, 218);
+}
+
+section {
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+#home {
+    background: url('images/background.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 5rem 1rem;
+    margin-top: 0;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text {
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.linkedin-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 1rem 2rem;
+    background-color: rgb(9, 11, 32);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.linkedin-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(9, 11, 32, 0.7);
+}
+
+.linkedin-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: rgb(227, 227, 230);
+    margin-bottom: 2rem;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+#projects .project,
+#experience .job,
+#education .education {
+    border: none;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    background-color: rgb(27, 34, 54);
+    color: rgb(212, 213, 216);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover,
+.job:hover,
+.education:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(212, 213, 216, 0.7);
+}
+
+.project,
+.job,
+.education {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.project-info,
+.job-info,
+.education-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.line {
+    width: 4px;
+    height: 50px;
+    background-color: rgb(65, 70, 81);
+    margin: 20px auto;
+}
+
+.edu-logo {
+    width: 200px;
+    height: auto;
+    align-self: flex-start;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#skills .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: none;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    background-color: rgb(27, 34, 54);
+    color: rgb(212, 213, 216);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill p {
+    margin-top: 5px;
+    font-size: 1.25rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #003f7f;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #0056b3;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#contact input,
+#contact textarea {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(8, 11, 23);
+    color: rgb(210, 213, 218);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#contact input:hover,
+#contact textarea:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(210, 213, 218, 0.7);
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: rgb(210, 213, 218);
+}
+
+#contact textarea {
+    height: 500px;
+}
+
+#contact a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+#contact button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(8, 11, 23);
+    color: rgb(210, 213, 218);
+}
+
+#contact button:hover {
+    background-color: rgb(27, 34, 54);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(8, 11, 23);
+}
+
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    section {
+        padding: 3rem 1rem;
+        margin-top: 3rem;
+    }
+
+    .intro-text {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .linkedin-button {
+        padding: 0.5rem 1rem;
+    }
+
+    .linkedin-logo {
+        width: 80px;
+    }
+}

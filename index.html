@@ -1,10 +1,56 @@
+<!--
+  Pratick Kafley Portfolio Website
+  Modern, cyberpunk-inspired, floating glassmorphic design
+  All sections, navbar, and effects are described for maintainability
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pratick Kafley's Portfolio</title>
+  <meta name="description" content="Pratick Kafley - Computer Science student at Carnegie Mellon University. Experienced in Python, C++, Java, JavaScript, FastAPI, React, and more. Check out my projects and experience." />
+  <meta name="keywords" content="Pratick Kafley, Computer Science, Carnegie Mellon, Software Engineer, Python, JavaScript, React, FastAPI" />
+  <meta name="author" content="Pratick Kafley" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Pratick Kafley - Computer Science Student & Software Engineer" />
+  <meta property="og:description" content="Computer Science student at Carnegie Mellon University with experience in full-stack development, machine learning, and software engineering." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pratickkafley.com" />
+  <meta property="og:image" content="https://pratickkafley.com/images/profilePic.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pratick Kafley - Computer Science Student" />
+  <meta name="twitter:description" content="Computer Science student at Carnegie Mellon University" />
+  <meta name="twitter:image" content="https://pratickkafley.com/images/profilePic.jpg" />
+  <title>Pratick Kafley - Computer Science Student & Software Engineer | Portfolio</title>
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="preload" href="script.js" as="script" />
+  <link rel="preload" href="images/profilePic.jpg" as="image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pratick Kafley",
+    "jobTitle": "Computer Science Student",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Carnegie Mellon University"
+    },
+    "url": "https://pratickkafley.com",
+    "sameAs": [
+      "https://linkedin.com/in/pratick-k",
+      "https://github.com/ppratick"
+    ],
+    "knowsAbout": ["Computer Science", "Software Engineering", "Python", "JavaScript", "React", "FastAPI"],
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "Carnegie Mellon University"
+    }
+  }
+  </script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function () {
@@ -12,354 +58,283 @@
     })();
   </script>
 </head>
-
 <body>
-  <header>
-    <nav>
+  <header role="banner">
+    <!-- Floating, always-visible navigation bar -->
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <!-- Navigation links to each section -->
+        <li><a href="#home" class="active" aria-label="Go to Home section">Home</a></li>
+        <li><a href="#about" aria-label="Go to About section">About</a></li>
+        <li><a href="#education" aria-label="Go to Education section">Education</a></li>
+        <li><a href="#experience" aria-label="Go to Experience section">Experience</a></li>
+        <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
+        <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
+        <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
       </ul>
     </nav>
   </header>
-
-  <!-- HOME SECTION -->
-  <section id="home">
-    <img src="images/profilePic.jpg" alt="Profile Picture" class="profile-picture" />
-    <div class="intro-text">
-      <h2>Hello, I'm Pratick, a Computer Science student at Carnegie Mellon University</h2>
-      <!-- Social Buttons: LinkedIn & GitHub -->
-      <div class="social-buttons">
-        <a
-          href="https://linkedin.com/in/pratick-k"
-          target="_blank"
-          class="linkedin-button"
-        >
-          <img src="images/linkedin.png" alt="LinkedIn Logo" class="social-logo" />
-        </a>
-        <a
-          href="https://github.com/ppratick"
-          target="_blank"
-          class="linkedin-button"
-        >
-          <img src="images/githubt.png" alt="GitHub Logo" class="social-logo" />
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-      <p>
-        I’m a second-year Computer Science student at Carnegie Mellon University, originally from Nepal and now based in Springfield, MA. I’m passionate about solving real-world problems through technology and innovation, blending my technical expertise with a growing understanding of business through a minor in Business Administration. At CMU, I’m constantly exploring new technologies and collaborating on meaningful projects that push the boundaries of what’s possible.
-      </p>
-      <h3>What I’m Currently Learning</h3>
-      <ul>
-        <li>Functional programming with SML</li>
-        <li>Advanced Git workflows and open-source collaboration</li>
-        <li>Software engineering best practices, system design, and scalability</li>
-      </ul>
-      <h3>Beyond the Code</h3>
-      <p>
-        When I’m not coding, you’ll find me staying active—whether it’s playing soccer, swimming, or watching a game. I’m a die-hard FC Barcelona fan and also support the Boston Celtics.
-      </p>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <!-- The Ultimate Golazo -->
-    <div class="project">
-      <div class="project-info">
-        <h3>The Ultimate Golazo</h3>
-        <p>Made with: Python</p>
-        <p>
-          The Ultimate Golazo is a Python-based soccer simulation game inspired by FIFA, featuring realistic ball physics,
-          player movements, and a challenging AI opponent. Utilizing object-oriented programming and CMU Graphics, the
-          game offers strategic gameplay where players can control a team and compete against an AI opponent. The project
-          faced challenges in AI development and physics simulation, but resulted in an engaging and immersive
-          experience. Future enhancements include multiplayer functionality, improved AI, and additional game modes for
-          a richer user experience.
-        </p>
-        <a
-          href="https://www.youtube.com/watch?v=-rZ5iOyUUQY"
-          target="_blank"
-        ><button>YouTube</button></a>
-        <a
-          href="https://github.com/ppratick/The-Ultimate-Golazo"
-          target="_blank"
-        ><button>GitHub</button></a>
-      </div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/-rZ5iOyUUQY?si=7AVVxsheG8MDvPme"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
-
-    <!-- Crosshair -->
-    <div class="project">
-      <div class="project-info">
-        <h3>Crosshair</h3>
-        <p>Made with: APRIL Tag, Arduino, C++, GitHub, Linux, OpenCV, Python, Ubuntu, VSCode</p>
-        <p>
-          Crosshair uses APRIL Tags and advanced computer vision to autonomously navigate and assemble components,
-          minimizing human intervention. Using a modified ELEGOO Smart Robot Car Kit, we achieved precise and adaptive
-          pathfinding. Despite challenges in motor control and vision accuracy, our solution demonstrated remarkable
-          precision, consistently aligning objects within one inch. Future plans include integrating a Raspberry Pi for
-          complete autonomy and expanding the technology to various robotic applications, including zero-gravity
-          environments.
-        </p>
-        <a href="https://www.youtube.com/watch?v=Bcm44azlQFQ" target="_blank"
-          ><button>YouTube</button></a
-        >
-        <a href="https://devpost.com/software/crosshair" target="_blank"
-          ><button>Devpost</button></a
-        >
-        <a href="https://github.com/ChromeUniverse/hackcmu-wteam" target="_blank"
-          ><button>GitHub</button></a
-        >
-      </div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Bcm44azlQFQ"
-        title="HackCMU   SD 480p"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <h2>My Skills</h2>
-
-    <!-- Programming Languages -->
-    <div class="skills-category">
-      <h3>Programming Languages</h3>
-      <div class="skills-container">
-        <div class="skill">
-          <img src="images/c.png" alt="C Logo" />
-          <p>C</p>
-        </div>
-        <div class="skill">
-          <img src="images/c++.png" alt="C++ Logo" />
-          <p>C++</p>
-        </div>
-        <div class="skill">
-          <img src="images/python.png" alt="Python Logo" />
-          <p>Python</p>
-        </div>
-        <div class="skill">
-          <img src="images/java.png" alt="Java Logo" />
-          <p>Java</p>
-        </div>
-        <div class="skill">
-          <img src="images/html.png" alt="HTML Logo" />
-          <p>HTML</p>
-        </div>
-        <div class="skill">
-          <img src="images/css.png" alt="CSS Logo" />
-          <p>CSS</p>
-        </div>
-        <div class="skill">
-          <img src="images/javascript.png" alt="JavaScript Logo" />
-          <p>JavaScript</p>
-        </div>
-        <div class="skill">
-          <img src="images/sml.png" alt="SML Logo" />
-          <p>SML</p>
-        </div>
-        <div class="skill">
-          <img src="images/nodejs.png" alt="Node.js Logo" />
-          <p>Node.js</p>
-        </div>
-        <div class="skill">
-          <img src="images/julia.png" alt="Julia Logo" />
-          <p>Julia</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Development Tools -->
-    <div class="skills-category">
-      <h3>Development Tools</h3>
-      <div class="skills-container">
-        <div class="skill">
-          <img src="images/github.png" alt="Git Logo" />
-          <p>Git</p>
-        </div>
-        <div class="skill">
-          <img src="images/vscode.png" alt="VSCode Logo" />
-          <p>VSCode</p>
-        </div>
-        <div class="skill">
-          <img src="images/arduino.png" alt="Arduino IDE Logo" />
-          <p>Arduino IDE</p>
-        </div>
-        <div class="skill">
-          <img src="images/command-line.png" alt="Unix Commands Logo" />
-          <p>Unix Commands</p>
-        </div>
-        <div class="skill">
-          <img src="images/figma.png" alt="Figma Logo" />
-          <p>Figma</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Microsoft Tools -->
-    <div class="skills-category">
-      <h3>Microsoft Tools</h3>
-      <div class="skills-container">
-        <div class="skill">
-          <img src="images/excel.png" alt="Excel Logo" />
-          <p>Excel</p>
-        </div>
-        <div class="skill">
-          <img src="images/office.png" alt="Office Logo" />
-          <p>Office</p>
-        </div>
-        <div class="skill">
-          <img src="images/powera.png" alt="Power Automate Logo" />
-          <p>Power Automate</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certificates -->
-    <div class="skills-category">
-      <h3>Certificates</h3>
-      <div class="skills-container">
-        <div class="skill">
-          <img src="images/isc2.png" alt="ISC2 Logo" />
-          <p>Certified in Cybersecurity – ISC2</p>
+  <!-- Home Section: Profile image, intro, and social links -->
+  <section id="home" role="main" aria-label="Home section">
+    <div class="section-content">
+      <img src="images/profilePic.jpg" alt="Pratick Kafley's professional headshot" class="profile-picture" loading="eager" />
+      <div class="intro-text">
+        <h1>Hello, I'm Pratick, a Computer Science student at Carnegie Mellon University</h1>
+        <div class="social-buttons" role="group" aria-label="Social media links">
+          <!-- LinkedIn and GitHub buttons -->
+          <a href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer" class="linkedin-button" aria-label="Visit Pratick's LinkedIn profile">
+            <img src="images/linkedin.png" alt="LinkedIn" class="social-logo" loading="lazy" />
+          </a>
+          <a href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer" class="linkedin-button" aria-label="Visit Pratick's GitHub profile">
+            <img src="images/githubt.png" alt="GitHub" class="social-logo" loading="lazy" />
+          </a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- EXPERIENCE SECTION -->
-  <section id="experience">
-    <h2>My Experience</h2>
-
-    <div class="job">
-      <div class="job-info">
-        <h3>Brand Representative</h3>
-        <p>Hollister Co.</p>
-        <p>May 2024 – August 2024</p>
+  <div class="section-divider"></div>
+  <!-- About Section: Personal background and interests -->
+  <section id="about" aria-label="About section">
+    <div class="section-content">
+      <h2>About Me</h2>
+      <div class="about">
         <p>
-          At Hollister, I efficiently managed inventory, ensured timely restocking of merchandise, and provided customer
-          support, consistently exceeding weekly targets by 15%. Through exceptional customer service and product
-          selection assistance, I maintained a 95% customer satisfaction rate. Additionally, I played a key role in
-          training new employees, significantly enhancing team performance and fostering a positive work environment.
+          I'm a second-year Computer Science student at Carnegie Mellon University, originally from Nepal and now based in Springfield, MA. I am passionate about leveraging technology and innovation to solve real-world problems, blending strong technical skills with a growing understanding of business through my minor in Business Administration. At CMU, I thrive on exploring new technologies and collaborating on projects that push boundaries and create meaningful impact.
+        </p>
+        <p>
+          Outside of academics and coding, I enjoy staying active—whether it's playing soccer, swimming, or spending time outdoors. I value continuous growth, creativity, and making a difference through both my work and personal pursuits.
         </p>
       </div>
     </div>
-    <div class="line"></div>
-
-    <div class="job">
-      <div class="job-info">
-        <h3>Virtual Fellow</h3>
-        <p>Snap Inc.</p>
-        <p>March 2024 – April 2024</p>
-        <p>
-          As a Virtual Fellow at the Snap Global Office Hours Fellowship, I sharpened my leadership and cross-cultural
-          collaboration skills through mentorship and interactive workshops. Partnering with international peers, I
-          developed innovative solutions to real-world challenges, thereby improving my global communication and
-          project management abilities.
-        </p>
+  </section>
+  <div class="section-divider"></div>
+  <!-- Education Section: Academic history -->
+  <section id="education" aria-label="Education section">
+    <div class="section-content">
+      <h2>My Education</h2>
+      <div class="education">
+        <img src="images/cmu.png" alt="CMU Logo" class="edu-logo" />
+        <div class="education-info">
+          <h3>Carnegie Mellon University</h3>
+          <p>Major in Computer Science</p>
+          <p>Minor in Business Administration</p>
+          <p>Anticipated Graduation: 2027</p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="education">
+        <img src="images/central.png" alt="Springfield Central Logo" class="edu-logo" />
+        <div class="education-info">
+          <h3>Springfield Central High School</h3>
+          <p>High School Diploma</p>
+          <p>Graduated: 2023</p>
+          <p>GPA: 4.61</p>
+          <p>Salutatorian</p>
+        </div>
       </div>
     </div>
-    <div class="line"></div>
-
-    <div class="job">
+  </section>
+  <div class="section-divider"></div>
+  <!-- Experience Section: Work and research experience -->
+  <section id="experience" aria-label="Experience section">
+    <div class="section-content">
+      <h2>My Experience</h2>
+      <!-- Each .job is a separate experience entry -->
+      <div class="job">
         <div class="job-info">
-          <h3>Math & Python Tutor</h3>
-          <p>Springfield Public Schools</p>
-          <p>August 2021 – May 2023</p>
+          <h3>Software Engineering Intern</h3>
+          <p>Goalday, Remote</p>
+          <p>May 2025 – Present</p>
           <p>
-            As a Math & Python Tutor at Springfield Public Schools, I supported students in calculus, pre-calculus, algebra 1/2, and geometry, helping them improve their academic performance. Additionally, I provided instruction in Python, focusing on various libraries, which enhanced students' coding skills and deepened their understanding of programming concepts.
+            As a Software Engineering Intern at Goalday, I lead backend development using FastAPI and MySQL to build scalable APIs and support dynamic data pipelines. I architect and integrate cron-based ETL flows with OpenAI, X, and Grok APIs for real-time influencer discovery and content tracking. My work includes defining and maintaining the database schema with SQLAlchemy and Alembic, and collaborating closely with the frontend team to align API contracts and async data flows using Agile sprints and GitHub Projects.
           </p>
         </div>
       </div>
       <div class="line"></div>
-
-    <div class="job">
-      <div class="job-info">
-        <h3>Sales Consultant</h3>
-        <p>The Men’s Wearhouse</p>
-        <p>May 2022 – August 2023</p>
-        <p>
-          As a Sales Consultant at The Men's Wearhouse, I delivered custom fitting services to over 250 customers,
-          significantly boosting satisfaction and increasing sales by 15%. I also formulated effective merchandising
-          strategies and trained new employees, contributing to enhanced team performance and an outstanding customer
-          experience.
-        </p>
+      <div class="job">
+        <div class="job-info">
+          <h3>Passion Project Mentor</h3>
+          <p>Curious Cardinals, Remote</p>
+          <p>April 2025 – Present</p>
+          <p>
+            As a Passion Project Mentor, I provide individualized mentorship in computer science and software development for high school students. I support diverse technical projects, including a tutoring platform, a job tracker web app, and a student-centered property search tool. My guidance covers full-stack development using HTML, CSS, JavaScript, and MySQL, with an emphasis on database design, backend logic, and UI/UX principles.
+          </p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="job">
+        <div class="job-info">
+          <h3>Eye-Tracking Research Assistant</h3>
+          <p>Carnegie Mellon University, Pittsburgh, PA</p>
+          <p>May 2025 – July 2025</p>
+          <p>
+            As an Eye-Tracking Research Assistant, I conducted psycholinguistics studies on sentence comprehension using eye-tracking and visual world paradigms. I built Gorilla-based experiments to test preview cue effects on syntactic ambiguity, and analyzed gaze data in R and Python to study predictive processing in language. My responsibilities included setting up and calibrating eye-tracking equipment, designing user studies, and presenting findings to the research team.
+          </p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="job">
+        <div class="job-info">
+          <h3>Virtual Fellow</h3>
+          <p>Snap Inc., Remote</p>
+          <p>March 2024 – April 2024</p>
+          <p>
+            As a Virtual Fellow at Snap Inc.'s Global Office Hours Fellowship, I sharpened my leadership and cross-cultural collaboration skills through mentorship and interactive workshops. I partnered with international peers to develop innovative solutions to real-world challenges, improving my global communication and project management abilities.
+          </p>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- EDUCATION SECTION -->
-  <section id="education">
-    <h2>My Education</h2>
-
-    <div class="education">
-      <img src="images/cmu.png" alt="CMU Logo" class="edu-logo" />
-      <div class="education-info">
-        <h3>Carnegie Mellon University</h3>
-        <p>Major in Computer Science</p>
-        <p>Minor in Business Administration</p>
-        <p>Anticipated Graduation: 2027</p>
+  <div class="section-divider"></div>
+  <!-- Projects Section: Portfolio projects with links and media -->
+  <section id="projects" aria-label="Projects section">
+    <div class="section-content">
+      <h2>My Projects</h2>
+      <!-- Each .project is a separate project entry -->
+      <div class="project">
+        <div class="project-info">
+          <h3>The Ultimate Golazo</h3>
+          <p>Made with: Python</p>
+          <p>
+            The Ultimate Golazo is a Python-based soccer simulation game inspired by FIFA, featuring realistic ball physics, player movements, and a challenging AI opponent. Utilizing object-oriented programming and CMU Graphics, the game offers strategic gameplay where players can control a team and compete against an AI opponent. The project faced challenges in AI development and physics simulation, but resulted in an engaging and immersive experience. Future enhancements include multiplayer functionality, improved AI, and additional game modes for a richer user experience.
+          </p>
+          <a href="https://www.youtube.com/watch?v=-rZ5iOyUUQY" target="_blank"><button>YouTube</button></a>
+          <a href="https://github.com/ppratick/The-Ultimate-Golazo" target="_blank"><button>GitHub</button></a>
+        </div>
+        <!-- Embedded YouTube video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-rZ5iOyUUQY?si=7AVVxsheG8MDvPme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-    </div>
-    <div class="line"></div>
-
-    <div class="education">
-      <img src="images/central.png" alt="Springfield Central Logo" class="edu-logo" />
-      <div class="education-info">
-        <h3>Springfield Central High School</h3>
-        <p>High School Diploma</p>
-        <p>Graduated: 2023</p>
-        <p>GPA: 4.61</p>
-        <p>Salutatorian</p>
+      <div class="project">
+        <div class="project-info">
+          <h3>Crosshair</h3>
+          <p>Made with: APRIL Tag, Arduino, C++, GitHub, Linux, OpenCV, Python, Ubuntu, VSCode</p>
+          <p>
+            Crosshair uses APRIL Tags and advanced computer vision to autonomously navigate and assemble components, minimizing human intervention. Using a modified ELEGOO Smart Robot Car Kit, we achieved precise and adaptive pathfinding. Despite challenges in motor control and vision accuracy, our solution demonstrated remarkable precision, consistently aligning objects within one inch. Future plans include integrating a Raspberry Pi for complete autonomy and expanding the technology to various robotic applications, including zero-gravity environments.
+          </p>
+          <a href="https://www.youtube.com/watch?v=Bcm44azlQFQ" target="_blank"><button>YouTube</button></a>
+          <a href="https://devpost.com/software/crosshair" target="_blank"><button>Devpost</button></a>
+          <a href="https://github.com/ChromeUniverse/hackcmu-wteam" target="_blank"><button>GitHub</button></a>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bcm44azlQFQ" title="HackCMU   SD 480p" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <div class="project-info">
+          <h3>Canvas Assignment Sync & AI-Powered Study Planner</h3>
+          <p>Made with: Python</p>
+          <p>
+            Canvas Assignment Sync & AI-Powered Study Planner is a Python automation tool that syncs Canvas assignments to Apple Reminders using AppleScript and local APIs. It integrates large language models to generate concise summaries and adaptive study suggestions, streamlining academic planning and productivity for students. The tool automates tedious manual entry and leverages AI for smarter study workflows.
+          </p>
+          <a href="https://github.com/ppratick/canvas-assignment-sync" target="_blank"><button>GitHub</button></a>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-info">
+          <h3>Multithreaded Web Proxy</h3>
+          <p>Made with: C, POSIX Threads, HTTP, Unix</p>
+          <p>
+            The Multithreaded Web Proxy is a concurrent HTTP proxy server designed and implemented in C. It features multithreading and a bounded buffer architecture to efficiently forward requests, cache objects with LRU eviction, and improve throughput by minimizing blocking. The project demonstrates advanced systems programming and network protocol handling, with a focus on performance and reliability. (Source code not publicly available.)
+          </p>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>
-      Please contact me directly at
-      <a href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a> or through this form.
-    </p>
-    <form id="contact-form">
-      <input type="email" name="user_email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit">
-        Submit <span>&#x27A1;</span>
-      </button>
-    </form>
+  <div class="section-divider"></div>
+  <!-- Skills Section: Technical skills grouped by category, badge style -->
+  <section id="skills" aria-label="Skills section">
+    <div class="section-content">
+      <h2>Technical Skills</h2>
+      <!-- Each .skills-category is a group of related skills -->
+      <div class="skills-category">
+        <h3>Languages & Programming</h3>
+        <div class="skills-badges">
+          <!-- Pill-shaped skill badges -->
+          <span class="skill-badge">C</span>
+          <span class="skill-badge">C++</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">SQL</span>
+          <span class="skill-badge">R</span>
+          <span class="skill-badge">SML</span>
+          <span class="skill-badge">Julia</span>
+          <span class="skill-badge">HTML</span>
+          <span class="skill-badge">CSS</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3>Frameworks, Libraries & Tools</h3>
+        <div class="skills-badges">
+          <span class="skill-badge">FastAPI</span>
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">SQLAlchemy</span>
+          <span class="skill-badge">Alembic</span>
+          <span class="skill-badge">Pandas</span>
+          <span class="skill-badge">NumPy</span>
+          <span class="skill-badge">OpenCV</span>
+          <span class="skill-badge">Docker</span>
+          <span class="skill-badge">Git</span>
+          <span class="skill-badge">GitHub</span>
+          <span class="skill-badge">VSCode</span>
+          <span class="skill-badge">Figma</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3>Systems, APIs & Infrastructure</h3>
+        <div class="skills-badges">
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">REST APIs</span>
+          <span class="skill-badge">OAuth</span>
+          <span class="skill-badge">Unix/Linux</span>
+          <span class="skill-badge">OpenAI API</span>
+          <span class="skill-badge">Grok API</span>
+          <span class="skill-badge">Cron jobs</span>
+          <span class="skill-badge">Arduino</span>
+          <span class="skill-badge">Mailgun</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3>Workflow & Collaboration</h3>
+        <div class="skills-badges">
+          <span class="skill-badge">GitHub Projects</span>
+          <span class="skill-badge">Agile</span>
+          <span class="skill-badge">Slack</span>
+          <span class="skill-badge">Notion</span>
+          <span class="skill-badge">Zoom</span>
+          <span class="skill-badge">Google Workspace</span>
+          <span class="skill-badge">Microsoft Office</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h3>Certifications</h3>
+        <div class="skills-badges">
+          <span class="skill-badge">Certified in Cybersecurity – ISC2</span>
+        </div>
+      </div>
+    </div>
   </section>
-
+  <div class="section-divider"></div>
+  <!-- Contact Section: Email and contact form -->
+  <section id="contact" aria-label="Contact section">
+    <div class="section-content">
+      <h2>Contact Me</h2>
+      <p>
+        Please contact me directly at
+        <a href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a> or through this form.
+      </p>
+      <form id="contact-form">
+        <!-- Email input -->
+        <input type="email" name="user_email" placeholder="Your email" required />
+        <!-- Message textarea -->
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <!-- Submit button -->
+        <button type="submit">
+          Submit <span>&#x27A1;</span>
+        </button>
+      </form>
+    </div>
+  </section>
+  <!-- Main JavaScript for all effects and interactivity -->
   <script src="script.js"></script>
 </body>
 </html>

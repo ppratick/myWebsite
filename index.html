@@ -1,340 +1,178 @@
-<!--
-  Pratick Kafley Portfolio Website
-  Modern, cyberpunk-inspired, floating glassmorphic design
-  All sections, navbar, and effects are described for maintainability
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Pratick Kafley - Computer Science student at Carnegie Mellon University. Experienced in Python, C++, Java, JavaScript, FastAPI, React, and more. Check out my projects and experience." />
-  <meta name="keywords" content="Pratick Kafley, Computer Science, Carnegie Mellon, Software Engineer, Python, JavaScript, React, FastAPI" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pratick Kafley is a Carnegie Mellon computer science student and software engineer focused on systems, cloud infrastructure, and full-stack products." />
+  <meta name="keywords" content="Pratick Kafley, Computer Science, Carnegie Mellon, Software Engineer, Systems, Cloud Infrastructure, Backend Development" />
   <meta name="author" content="Pratick Kafley" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Pratick Kafley - Computer Science Student & Software Engineer" />
-  <meta property="og:description" content="Computer Science student at Carnegie Mellon University with experience in full-stack development, machine learning, and software engineering." />
+  <meta property="og:title" content="Pratick Kafley - Software Engineer" />
+  <meta property="og:description" content="Systems, cloud infrastructure, and full-stack engineering from a Carnegie Mellon computer science student." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pratickkafley.com" />
-  <meta property="og:image" content="https://pratickkafley.com/images/profilePic.jpg" />
+  <meta property="og:url" content="https://pratick.vercel.app" />
+  <meta property="og:image" content="https://pratick.vercel.app/images/profilePic.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pratick Kafley - Computer Science Student" />
-  <meta name="twitter:description" content="Computer Science student at Carnegie Mellon University" />
-  <meta name="twitter:image" content="https://pratickkafley.com/images/profilePic.jpg" />
-  <title>Pratick Kafley - Computer Science Student & Software Engineer | Portfolio</title>
+  <meta name="twitter:title" content="Pratick Kafley - Software Engineer" />
+  <meta name="twitter:description" content="Systems, cloud infrastructure, and full-stack engineering." />
+  <meta name="twitter:image" content="https://pratick.vercel.app/images/profilePic.jpg" />
+  <title>Pratick Kafley - Software Engineer | Portfolio</title>
   <link rel="preload" href="styles.css" as="style" />
-  <link rel="preload" href="script.js" as="script" />
   <link rel="preload" href="images/profilePic.jpg" as="image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Pratick Kafley",
-    "jobTitle": "Computer Science Student",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Carnegie Mellon University"
-    },
-    "url": "https://pratickkafley.com",
-    "sameAs": [
-      "https://linkedin.com/in/pratick-k",
-      "https://github.com/ppratick"
-    ],
-    "knowsAbout": ["Computer Science", "Software Engineering", "Python", "JavaScript", "React", "FastAPI"],
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "Carnegie Mellon University"
-    }
+    "jobTitle": "Software Engineer and Computer Science Student",
+    "affiliation": { "@type": "Organization", "name": "Carnegie Mellon University" },
+    "url": "https://pratick.vercel.app",
+    "sameAs": ["https://linkedin.com/in/pratick-k", "https://github.com/ppratick"],
+    "knowsAbout": ["Computer Science", "Software Engineering", "Distributed Systems", "Cloud Infrastructure", "Backend Development"]
   }
-  </script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("E7kHvjg7UEViV5X3z");
-    })();
   </script>
 </head>
 <body>
   <header role="banner">
-    <!-- Floating, always-visible navigation bar -->
+    <a class="wordmark" href="#home" aria-label="Pratick Kafley home">Pratick Kafley<span>.</span></a>
     <nav role="navigation" aria-label="Main navigation">
-      <ul>
-        <!-- Navigation links to each section -->
-        <li><a href="#home" class="active" aria-label="Go to Home section">Home</a></li>
-        <li><a href="#about" aria-label="Go to About section">About</a></li>
-        <li><a href="#education" aria-label="Go to Education section">Education</a></li>
-        <li><a href="#experience" aria-label="Go to Experience section">Experience</a></li>
-        <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
-        <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
-        <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+      <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <!-- Home Section: Profile image, intro, and social links -->
-  <section id="home" role="main" aria-label="Home section">
-    <div class="section-content">
-      <img src="images/profilePic.jpg" alt="Pratick Kafley's professional headshot" class="profile-picture" loading="eager" />
-      <div class="intro-text">
-        <h1>Hello, I'm Pratick, a Computer Science student at Carnegie Mellon University</h1>
-        <div class="social-buttons" role="group" aria-label="Social media links">
-          <!-- LinkedIn and GitHub buttons -->
-          <a href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer" class="linkedin-button" aria-label="Visit Pratick's LinkedIn profile">
-            <img src="images/linkedin.png" alt="LinkedIn" class="social-logo" loading="lazy" />
-          </a>
-          <a href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer" class="linkedin-button" aria-label="Visit Pratick's GitHub profile">
-            <img src="images/githubt.png" alt="GitHub" class="social-logo" loading="lazy" />
-          </a>
+
+  <main>
+    <section id="home" aria-label="Introduction">
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Building systems that hold up in the real world</p>
+          <h1>Hi, I'm <strong>Pratick Kafley.</strong></h1>
+          <p class="hero-summary">Computer Science at Carnegie Mellon. Software engineering across performance, infrastructure, backend systems, and thoughtful user-facing products.</p>
+          <p class="typed-line" data-text="Systems • Cloud • Full-stack products">Systems • Cloud • Full-stack products</p>
+          <div class="hero-actions">
+            <a class="button primary-button" href="#projects">Explore my work</a>
+            <a class="button secondary-button" href="mailto:pkafley@andrew.cmu.edu">Email me</a>
+          </div>
+          <div class="hero-links" aria-label="Social profiles">
+            <a href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="hero-portrait" aria-label="Portrait of Pratick Kafley">
+          <div class="portrait-ring"><img src="images/profilePic.jpg" alt="Pratick Kafley's professional headshot" loading="eager" /></div>
+          <div class="availability-card"><span></span> Open to 2027 new-grad opportunities</div>
         </div>
       </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
-  <!-- About Section: Personal background and interests -->
-  <section id="about" aria-label="About section">
-    <div class="section-content">
-      <h2>About Me</h2>
-      <div class="about">
-        <p>
-          I'm a second-year Computer Science student at Carnegie Mellon University, originally from Nepal and now based in Springfield, MA. I am passionate about leveraging technology and innovation to solve real-world problems, blending strong technical skills with a growing understanding of business through my minor in Business Administration. At CMU, I thrive on exploring new technologies and collaborating on projects that push boundaries and create meaningful impact.
-        </p>
-        <p>
-          Outside of academics and coding, I enjoy staying active—whether it's playing soccer, swimming, or spending time outdoors. I value continuous growth, creativity, and making a difference through both my work and personal pursuits.
-        </p>
-      </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
-  <!-- Education Section: Academic history -->
-  <section id="education" aria-label="Education section">
-    <div class="section-content">
-      <h2>My Education</h2>
-      <div class="education">
-        <img src="images/cmu.png" alt="CMU Logo" class="edu-logo" />
-        <div class="education-info">
-          <h3>Carnegie Mellon University</h3>
-          <p>Major in Computer Science</p>
-          <p>Minor in Business Administration</p>
-          <p>Anticipated Graduation: 2027</p>
+      <a class="scroll-cue" href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="about" aria-label="About">
+      <div class="section-content">
+        <div class="section-heading">
+          <p class="section-number">01 / About</p>
+          <h2>Engineer with range.<br /><span>Builder with intent.</span></h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-copy glass-card">
+            <p class="about-lead">I like problems that require understanding what is happening all the way down, from the interface someone touches to the system carrying the work underneath it.</p>
+            <p>I'm a Computer Science student at Carnegie Mellon University graduating in May 2027, with a minor in Business Administration. My work spans low-level systems, performance engineering, backend services, cloud infrastructure, and user-facing products.</p>
+            <p>Originally from Nepal and raised in Springfield, Massachusetts, I care about building technology that is technically rigorous and genuinely useful. Away from a screen, you'll usually find me playing soccer, swimming, or outdoors.</p>
+          </div>
+          <aside class="about-facts glass-card" aria-label="Quick facts">
+            <div><span>Based in</span><strong>Pittsburgh, PA</strong></div>
+            <div><span>Studying</span><strong>Computer Science + Business</strong></div>
+            <div><span>Graduating</span><strong>May 2027</strong></div>
+            <div><span>Currently exploring</span><strong>Systems, performance & cloud</strong></div>
+          </aside>
+        </div>
+        <div class="education-card glass-card">
+          <img src="images/cmu.png" alt="Carnegie Mellon University logo" />
+          <div>
+            <p class="card-kicker">Education</p>
+            <h3>Carnegie Mellon University</h3>
+            <p>B.S. in Computer Science · Minor in Business Administration</p>
+          </div>
+          <div class="education-meta"><strong>May 2027</strong><span>Dean's List, High Honors</span></div>
         </div>
       </div>
-      <div class="line"></div>
-      <div class="education">
-        <img src="images/central.png" alt="Springfield Central Logo" class="edu-logo" />
-        <div class="education-info">
-          <h3>Springfield Central High School</h3>
-          <p>High School Diploma</p>
-          <p>Graduated: 2023</p>
-          <p>GPA: 4.61</p>
-          <p>Salutatorian</p>
+    </section>
+
+    <section id="experience" aria-label="Experience">
+      <div class="section-content">
+        <div class="section-heading split-heading">
+          <div><p class="section-number">02 / Experience</p><h2>Where I've<br /><span>made an impact.</span></h2></div>
+          <p>From cloud performance to mentorship, I enjoy work where careful engineering creates visible results.</p>
+        </div>
+        <div class="timeline">
+          <article class="experience-row">
+            <div class="experience-date">May – Aug 2026</div><div class="timeline-marker"></div>
+            <div class="experience-card glass-card"><p class="card-kicker">Arm · Austin, TX</p><h3>Software Engineering Intern <span>Performance Engineering</span></h3><p>Automated OpenJDK performance comparisons with a GitLab CI pipeline that provisioned cloud test environments through Terraform and Ansible across AWS, Azure, GCP, and OCI. Benchmarked Java and Cassandra workloads and investigated anomalies with JVM and Linux telemetry.</p><div class="tag-list"><span>OpenJDK</span><span>Terraform</span><span>Ansible</span><span>Cloud</span></div></div>
+          </article>
+          <article class="experience-row">
+            <div class="experience-date">May – Aug 2025</div><div class="timeline-marker"></div>
+            <div class="experience-card glass-card"><p class="card-kicker">Goalday · Remote</p><h3>Backend Software Engineering Intern</h3><p>Engineered Python and FastAPI services for OAuth, real-time user matching, recommendation workflows, and third-party integrations backed by MySQL. Built data pipelines using social content and AI embeddings for personalized recommendations.</p><div class="tag-list"><span>Python</span><span>FastAPI</span><span>MySQL</span><span>AI APIs</span></div></div>
+          </article>
+          <article class="experience-row">
+            <div class="experience-date">Apr 2025 – Present</div><div class="timeline-marker"></div>
+            <div class="experience-card glass-card"><p class="card-kicker">Curious Cardinals · Remote</p><h3>Full-Stack Development Mentor</h3><p>Mentor 10+ beginning programmers through designing, building, debugging, and deploying full-stack applications. Teach students to connect web interfaces to Flask or Express APIs, work with SQLite, and thoughtfully integrate Gemini or Ollama.</p><div class="tag-list"><span>Mentorship</span><span>Flask</span><span>Express</span><span>SQLite</span></div></div>
+          </article>
+          <article class="experience-row">
+            <div class="experience-date">May – Jul 2025</div><div class="timeline-marker"></div>
+            <div class="experience-card glass-card"><p class="card-kicker">Carnegie Mellon University</p><h3>Eye-Tracking Undergraduate Researcher</h3><p>Designed psycholinguistics experiments and analyzed gaze data with Python and R to study how visual cues influence spoken-language comprehension. Prepared stimuli, calibrated equipment, and presented findings on attention and sentence interpretation.</p><div class="tag-list"><span>Python</span><span>R</span><span>Experiment Design</span></div></div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
-  <!-- Experience Section: Work and research experience -->
-  <section id="experience" aria-label="Experience section">
-    <div class="section-content">
-      <h2>My Experience</h2>
-      <!-- Each .job is a separate experience entry -->
-      <div class="job">
-        <div class="job-info">
-          <h3>Software Engineering Intern</h3>
-          <p>Goalday, Remote</p>
-          <p>May 2025 – Present</p>
-          <p>
-            As a Software Engineering Intern at Goalday, I lead backend development using FastAPI and MySQL to build scalable APIs and support dynamic data pipelines. I architect and integrate cron-based ETL flows with OpenAI, X, and Grok APIs for real-time influencer discovery and content tracking. My work includes defining and maintaining the database schema with SQLAlchemy and Alembic, and collaborating closely with the frontend team to align API contracts and async data flows using Agile sprints and GitHub Projects.
-          </p>
+    </section>
+
+    <section id="projects" aria-label="Projects">
+      <div class="section-content">
+        <div class="section-heading split-heading">
+          <div><p class="section-number">03 / Selected work</p><h2>Projects built to<br /><span>solve real problems.</span></h2></div>
+          <p>Coursework, personal tools, and products that show how I think across systems and experiences.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured-project glass-card"><div class="project-topline"><span class="project-index">01</span><span class="privacy-label">Private repository</span></div><h3>Reliable Messaging Protocol</h3><p>Implemented a reliable transport layer over UDP with ordered, duplicate-free delivery for concurrent clients and servers. Combines sliding-window flow control, acknowledgments, retransmission, backoff, heartbeats, and timeout detection to withstand packet loss and corruption.</p><div class="tag-list"><span>Go</span><span>UDP</span><span>Concurrency</span><span>Distributed Systems</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Reliable%20Messaging%20Protocol%20project">Email me for access</a></article>
+          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">02</span><span class="privacy-label">Private repository</span></div><h3>Dynamic Memory Allocator</h3><p>Built a 64-bit heap allocator with 15 segregated free lists, boundary tags, block splitting, constant-time coalescing, and heap-integrity checks. Passed more than one million randomized operations while achieving 72.1% heap utilization.</p><div class="project-metric"><strong>10.93M</strong><span>operations / second</span></div><div class="tag-list"><span>C</span><span>Systems</span><span>Data Structures</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Dynamic%20Memory%20Allocator%20project">Email me for access</a></article>
+          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">03</span><span class="privacy-label">Private repository</span></div><h3>SplitTab</h3><p>Built a SwiftUI app that converts receipt photos into editable line items with GPT-4o Vision and assigns purchases across participants. Supports shared items, equal or itemized splits, taxes, tips, fees, discounts, and total reconciliation.</p><div class="tag-list"><span>Swift</span><span>SwiftUI</span><span>AVFoundation</span><span>GPT-4o Vision</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=SplitTab%20project">Email me for access</a></article>
+          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">04</span><span class="public-label">Public repository</span></div><h3>StudySyncAI</h3><p>Built Python CLI and Flask workflows that sync Canvas assignments to Apple Reminders and persist course state in SQLite. Idempotent imports prevent duplicates, while optional local Ollama models generate summaries, time estimates, priorities, and workload insights without uploading course data.</p><div class="tag-list"><span>Python</span><span>Flask</span><span>SQLite</span><span>Ollama</span></div><a class="project-link" href="https://github.com/ppratick/studySyncAI" target="_blank" rel="noopener noreferrer">View on GitHub</a></article>
+          <article class="project-card wide-project glass-card"><div class="project-topline"><span class="project-index">05</span><span class="privacy-label">Private repository</span></div><h3>Multithreaded HTTP Proxy</h3><p>Implemented an HTTP/1.0 proxy that concurrently forwards requests and streams responses using POSIX threads and sockets. A mutex-protected 1 MiB LRU cache safely serves repeated requests across clients without returning to the origin server.</p><div class="tag-list"><span>C</span><span>POSIX Threads</span><span>Sockets</span><span>LRU Cache</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Multithreaded%20HTTP%20Proxy%20project">Email me for access</a></article>
         </div>
       </div>
-      <div class="line"></div>
-      <div class="job">
-        <div class="job-info">
-          <h3>Passion Project Mentor</h3>
-          <p>Curious Cardinals, Remote</p>
-          <p>April 2025 – Present</p>
-          <p>
-            As a Passion Project Mentor, I provide individualized mentorship in computer science and software development for high school students. I support diverse technical projects, including a tutoring platform, a job tracker web app, and a student-centered property search tool. My guidance covers full-stack development using HTML, CSS, JavaScript, and MySQL, with an emphasis on database design, backend logic, and UI/UX principles.
-          </p>
+    </section>
+
+    <section id="skills" aria-label="Technical skills">
+      <div class="section-content">
+        <div class="section-heading"><p class="section-number">04 / Toolkit</p><h2>What I work with.</h2></div>
+        <div class="skills-grid">
+          <div class="skill-group glass-card"><span>01</span><h3>Languages</h3><p>C · C++ · Python · Go · Java · JavaScript · TypeScript · SQL · Swift · Bash</p></div>
+          <div class="skill-group glass-card"><span>02</span><h3>Frameworks</h3><p>FastAPI · Flask · React · Node.js · Express · PyTorch · SwiftUI · SQLAlchemy</p></div>
+          <div class="skill-group glass-card"><span>03</span><h3>Cloud & Data</h3><p>AWS · Terraform · Ansible · GitLab CI/CD · Docker · Kubernetes · PostgreSQL · MySQL · Cassandra · Redis</p></div>
+          <div class="skill-group glass-card"><span>04</span><h3>Systems & AI</h3><p>Linux · Concurrency · TCP/UDP · POSIX Threads · OpenJDK · JFR · GDB · Valgrind · OpenAI · Gemini · Ollama</p></div>
         </div>
       </div>
-      <div class="line"></div>
-      <div class="job">
-        <div class="job-info">
-          <h3>Eye-Tracking Research Assistant</h3>
-          <p>Carnegie Mellon University, Pittsburgh, PA</p>
-          <p>May 2025 – July 2025</p>
-          <p>
-            As an Eye-Tracking Research Assistant, I conducted psycholinguistics studies on sentence comprehension using eye-tracking and visual world paradigms. I built Gorilla-based experiments to test preview cue effects on syntactic ambiguity, and analyzed gaze data in R and Python to study predictive processing in language. My responsibilities included setting up and calibrating eye-tracking equipment, designing user studies, and presenting findings to the research team.
-          </p>
-        </div>
+    </section>
+
+    <section id="contact" aria-label="Contact">
+      <div class="section-content contact-shell glass-card">
+        <div class="contact-copy"><p class="section-number">05 / Contact</p><h2>Let's connect.</h2><p>Have a role, project, or question about one of my private repositories? Reach out directly and I'll get back to you.</p></div>
+        <div class="contact-options" aria-label="Contact options"><p>Find me online</p><a href="mailto:pkafley@andrew.cmu.edu"><span>Email</span><strong>pkafley@andrew.cmu.edu</strong></a><a href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/pratick-k</strong></a><a href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>github.com/ppratick</strong></a></div>
       </div>
-      <div class="line"></div>
-      <div class="job">
-        <div class="job-info">
-          <h3>Virtual Fellow</h3>
-          <p>Snap Inc., Remote</p>
-          <p>March 2024 – April 2024</p>
-          <p>
-            As a Virtual Fellow at Snap Inc.'s Global Office Hours Fellowship, I sharpened my leadership and cross-cultural collaboration skills through mentorship and interactive workshops. I partnered with international peers to develop innovative solutions to real-world challenges, improving my global communication and project management abilities.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
-  <!-- Projects Section: Portfolio projects with links and media -->
-  <section id="projects" aria-label="Projects section">
-    <div class="section-content">
-      <h2>My Projects</h2>
-      <!-- Each .project is a separate project entry -->
-      <div class="project">
-        <div class="project-info">
-          <h3>The Ultimate Golazo</h3>
-          <p>Made with: Python</p>
-          <p>
-            The Ultimate Golazo is a Python-based soccer simulation game inspired by FIFA, featuring realistic ball physics, player movements, and a challenging AI opponent. Utilizing object-oriented programming and CMU Graphics, the game offers strategic gameplay where players can control a team and compete against an AI opponent. The project faced challenges in AI development and physics simulation, but resulted in an engaging and immersive experience. Future enhancements include multiplayer functionality, improved AI, and additional game modes for a richer user experience.
-          </p>
-          <a href="https://www.youtube.com/watch?v=-rZ5iOyUUQY" target="_blank"><button>YouTube</button></a>
-          <a href="https://github.com/ppratick/The-Ultimate-Golazo" target="_blank"><button>GitHub</button></a>
-        </div>
-        <!-- Embedded YouTube video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-rZ5iOyUUQY?si=7AVVxsheG8MDvPme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="project">
-        <div class="project-info">
-          <h3>Crosshair</h3>
-          <p>Made with: APRIL Tag, Arduino, C++, GitHub, Linux, OpenCV, Python, Ubuntu, VSCode</p>
-          <p>
-            Crosshair uses APRIL Tags and advanced computer vision to autonomously navigate and assemble components, minimizing human intervention. Using a modified ELEGOO Smart Robot Car Kit, we achieved precise and adaptive pathfinding. Despite challenges in motor control and vision accuracy, our solution demonstrated remarkable precision, consistently aligning objects within one inch. Future plans include integrating a Raspberry Pi for complete autonomy and expanding the technology to various robotic applications, including zero-gravity environments.
-          </p>
-          <a href="https://www.youtube.com/watch?v=Bcm44azlQFQ" target="_blank"><button>YouTube</button></a>
-          <a href="https://devpost.com/software/crosshair" target="_blank"><button>Devpost</button></a>
-          <a href="https://github.com/ChromeUniverse/hackcmu-wteam" target="_blank"><button>GitHub</button></a>
-        </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bcm44azlQFQ" title="HackCMU   SD 480p" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="project">
-        <div class="project-info">
-          <h3>Canvas Assignment Sync & AI-Powered Study Planner</h3>
-          <p>Made with: Python</p>
-          <p>
-            Canvas Assignment Sync & AI-Powered Study Planner is a Python automation tool that syncs Canvas assignments to Apple Reminders using AppleScript and local APIs. It integrates large language models to generate concise summaries and adaptive study suggestions, streamlining academic planning and productivity for students. The tool automates tedious manual entry and leverages AI for smarter study workflows.
-          </p>
-          <a href="https://github.com/ppratick/canvas-assignment-sync" target="_blank"><button>GitHub</button></a>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-info">
-          <h3>Multithreaded Web Proxy</h3>
-          <p>Made with: C, POSIX Threads, HTTP, Unix</p>
-          <p>
-            The Multithreaded Web Proxy is a concurrent HTTP proxy server designed and implemented in C. It features multithreading and a bounded buffer architecture to efficiently forward requests, cache objects with LRU eviction, and improve throughput by minimizing blocking. The project demonstrates advanced systems programming and network protocol handling, with a focus on performance and reliability. (Source code not publicly available.)
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
-  <!-- Skills Section: Technical skills grouped by category, badge style -->
-  <section id="skills" aria-label="Skills section">
-    <div class="section-content">
-      <h2>Technical Skills</h2>
-      <!-- Each .skills-category is a group of related skills -->
-      <div class="skills-category">
-        <h3>Languages & Programming</h3>
-        <div class="skills-badges">
-          <!-- Pill-shaped skill badges -->
-          <span class="skill-badge">C</span>
-          <span class="skill-badge">C++</span>
-          <span class="skill-badge">Python</span>
-          <span class="skill-badge">Java</span>
-          <span class="skill-badge">JavaScript</span>
-          <span class="skill-badge">SQL</span>
-          <span class="skill-badge">R</span>
-          <span class="skill-badge">SML</span>
-          <span class="skill-badge">Julia</span>
-          <span class="skill-badge">HTML</span>
-          <span class="skill-badge">CSS</span>
-        </div>
-      </div>
-      <div class="skills-category">
-        <h3>Frameworks, Libraries & Tools</h3>
-        <div class="skills-badges">
-          <span class="skill-badge">FastAPI</span>
-          <span class="skill-badge">React</span>
-          <span class="skill-badge">Node.js</span>
-          <span class="skill-badge">SQLAlchemy</span>
-          <span class="skill-badge">Alembic</span>
-          <span class="skill-badge">Pandas</span>
-          <span class="skill-badge">NumPy</span>
-          <span class="skill-badge">OpenCV</span>
-          <span class="skill-badge">Docker</span>
-          <span class="skill-badge">Git</span>
-          <span class="skill-badge">GitHub</span>
-          <span class="skill-badge">VSCode</span>
-          <span class="skill-badge">Figma</span>
-        </div>
-      </div>
-      <div class="skills-category">
-        <h3>Systems, APIs & Infrastructure</h3>
-        <div class="skills-badges">
-          <span class="skill-badge">MySQL</span>
-          <span class="skill-badge">REST APIs</span>
-          <span class="skill-badge">OAuth</span>
-          <span class="skill-badge">Unix/Linux</span>
-          <span class="skill-badge">OpenAI API</span>
-          <span class="skill-badge">Grok API</span>
-          <span class="skill-badge">Cron jobs</span>
-          <span class="skill-badge">Arduino</span>
-          <span class="skill-badge">Mailgun</span>
-        </div>
-      </div>
-      <div class="skills-category">
-        <h3>Workflow & Collaboration</h3>
-        <div class="skills-badges">
-          <span class="skill-badge">GitHub Projects</span>
-          <span class="skill-badge">Agile</span>
-          <span class="skill-badge">Slack</span>
-          <span class="skill-badge">Notion</span>
-          <span class="skill-badge">Zoom</span>
-          <span class="skill-badge">Google Workspace</span>
-          <span class="skill-badge">Microsoft Office</span>
-        </div>
-      </div>
-      <div class="skills-category">
-        <h3>Certifications</h3>
-        <div class="skills-badges">
-          <span class="skill-badge">Certified in Cybersecurity – ISC2</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="section-divider"></div>
-  <!-- Contact Section: Email and contact form -->
-  <section id="contact" aria-label="Contact section">
-    <div class="section-content">
-      <h2>Contact Me</h2>
-      <p>
-        Please contact me directly at
-        <a href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a> or through this form.
-      </p>
-      <form id="contact-form">
-        <!-- Email input -->
-        <input type="email" name="user_email" placeholder="Your email" required />
-        <!-- Message textarea -->
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <!-- Submit button -->
-        <button type="submit">
-          Submit <span>&#x27A1;</span>
-        </button>
-      </form>
-    </div>
-  </section>
-  <!-- Main JavaScript for all effects and interactivity -->
+    </section>
+  </main>
+  <footer><p>Designed and built by Pratick Kafley <span>•</span> 2026</p></footer>
   <script src="script.js"></script>
 </body>
 </html>

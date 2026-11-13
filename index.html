@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pratick Kafley is a Carnegie Mellon computer science student and software engineer focused on systems, cloud infrastructure, and full-stack products." />
-  <meta name="keywords" content="Pratick Kafley, Computer Science, Carnegie Mellon, Software Engineer, Systems, Cloud Infrastructure, Backend Development" />
+  <meta name="description" content="Pratick Kafley is a Carnegie Mellon University computer science student and software engineer building systems, cloud infrastructure, and open-source apps." />
   <meta name="author" content="Pratick Kafley" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Pratick Kafley - Software Engineer" />
-  <meta property="og:description" content="Systems, cloud infrastructure, and full-stack engineering from a Carnegie Mellon computer science student." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#05070b" />
+  <meta property="og:title" content="Pratick Kafley · Software Engineer" />
+  <meta property="og:description" content="Systems, cloud infrastructure, and open-source apps from a Carnegie Mellon University computer science student." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pratick.vercel.app" />
   <meta property="og:image" content="https://pratick.vercel.app/images/profilePic.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pratick Kafley - Software Engineer" />
-  <meta name="twitter:description" content="Systems, cloud infrastructure, and full-stack engineering." />
+  <meta name="twitter:title" content="Pratick Kafley · Software Engineer" />
+  <meta name="twitter:description" content="Systems, cloud infrastructure, and open-source apps." />
   <meta name="twitter:image" content="https://pratick.vercel.app/images/profilePic.jpg" />
-  <title>Pratick Kafley - Software Engineer | Portfolio</title>
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="preload" href="images/profilePic.jpg" as="image" />
+  <title>Pratick Kafley · Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
@@ -32,147 +31,302 @@
     "affiliation": { "@type": "Organization", "name": "Carnegie Mellon University" },
     "url": "https://pratick.vercel.app",
     "sameAs": ["https://linkedin.com/in/pratick-k", "https://github.com/ppratick"],
-    "knowsAbout": ["Computer Science", "Software Engineering", "Distributed Systems", "Cloud Infrastructure", "Backend Development"]
+    "knowsAbout": ["Systems Programming", "Distributed Systems", "Cloud Infrastructure", "Backend Development", "iOS Development"]
   }
   </script>
 </head>
 <body>
-  <header role="banner">
-    <a class="wordmark" href="#home" aria-label="Pratick Kafley home">Pratick Kafley<span>.</span></a>
-    <nav role="navigation" aria-label="Main navigation">
-      <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav-links">
-        <span></span><span></span><span></span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="Pratick Kafley, back to top">Pratick Kafley<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
       </button>
-      <ul id="main-nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#apps">Apps</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="home" aria-label="Introduction">
-      <div class="hero-shell">
+  <main id="main">
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Building systems that hold up in the real world</p>
-          <h1>Hi, I'm <strong>Pratick Kafley.</strong></h1>
-          <p class="hero-summary">Computer Science at Carnegie Mellon. Software engineering across performance, infrastructure, backend systems, and thoughtful user-facing products.</p>
-          <p class="typed-line" data-text="Systems • Cloud • Full-stack products">Systems • Cloud • Full-stack products</p>
+          <p class="kicker"><span class="dot" aria-hidden="true"></span>Computer Science · Carnegie Mellon University · Class of 2027</p>
+          <h1>Hi, I'm <span class="accent">Pratick Kafley.</span></h1>
+          <p class="lede">I'm Pratick, a software engineer working across performance, backend systems, cloud infrastructure, and the apps people actually use.</p>
           <div class="hero-actions">
-            <a class="button primary-button" href="#projects">Explore my work</a>
-            <a class="button secondary-button" href="mailto:pkafley@andrew.cmu.edu">Email me</a>
-          </div>
-          <div class="hero-links" aria-label="Social profiles">
-            <a href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-solid" href="#apps">See my work</a>
+            <a class="btn btn-ghost" href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a>
           </div>
         </div>
-        <div class="hero-portrait" aria-label="Portrait of Pratick Kafley">
-          <div class="portrait-ring"><img src="images/profilePic.jpg" alt="Pratick Kafley's professional headshot" loading="eager" /></div>
-        </div>
+        <figure class="hero-portrait">
+          <div class="portrait-ring"><img src="images/profilePic.jpg" alt="Portrait of Pratick Kafley" width="1050" height="1028" /></div>
+          <figcaption class="portrait-chip"><span aria-hidden="true"></span>Pittsburgh, PA · Most recently at Arm</figcaption>
+        </figure>
       </div>
-      <a class="scroll-cue" href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
+      <div class="wrap">
+        <dl class="facts glass">
+          <div><dt>Studying</dt><dd>B.S. Computer Science, minor in Business</dd></div>
+          <div><dt>Recent</dt><dd>Performance engineering intern at Arm</dd></div>
+          <div><dt>Building</dt><dd>iOS, macOS, and web apps</dd></div>
+          <div><dt>Focus</dt><dd>Systems, performance, cloud</dd></div>
+        </dl>
+      </div>
     </section>
 
-    <section id="about" aria-label="About">
-      <div class="section-content">
-        <div class="section-heading">
-          <p class="section-number">01 / About</p>
-          <h2>Engineer with range.<br /><span>Builder with intent.</span></h2>
-        </div>
-        <div class="about-layout">
-          <div class="about-copy glass-card">
-            <p class="about-lead">I like problems that require understanding what is happening all the way down, from the interface someone touches to the system carrying the work underneath it.</p>
-            <p>I'm a Computer Science student at Carnegie Mellon University graduating in May 2027, with a minor in Business Administration. My work spans low-level systems, performance engineering, backend services, cloud infrastructure, and user-facing products.</p>
-            <p>Originally from Nepal and raised in Springfield, Massachusetts, I care about building technology that is technically rigorous and genuinely useful. Away from a screen, you'll usually find me playing soccer, swimming, or outdoors.</p>
+    <section class="section" id="apps" aria-labelledby="apps-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-label">01 — Open-source apps</p>
+          <h2 id="apps-title">Open-source apps.</h2>
+          <p class="section-intro">Each app is free and open source, with setup docs and sample-data screenshots in its repository.</p>
+        </header>
+
+        <article class="app app-feature glass" style="--tint: #6d7cff; --tint-2: #2a2f6b;">
+          <div class="app-stage stage-phones">
+            <img class="phone" src="images/projects/orbit-scheduled.jpg" alt="Orbit's Scheduled screen with a daily review and a morning briefing" width="600" height="1304" loading="lazy" />
+            <img class="phone" src="images/projects/orbit-chat.jpg" alt="Orbit chat drafting a reply and adding a reminder" width="600" height="1304" loading="lazy" />
+            <img class="phone" src="images/projects/orbit-assistant.jpg" alt="Customizing Orbit's assistant name and color" width="600" height="1304" loading="lazy" />
           </div>
-          <aside class="about-facts glass-card" aria-label="Quick facts">
-            <div><span>Based in</span><strong>Pittsburgh, PA</strong></div>
-            <div><span>Studying</span><strong>Computer Science + Business</strong></div>
-            <div><span>Graduating</span><strong>May 2027</strong></div>
-            <div><span>Currently exploring</span><strong>Systems, performance & cloud</strong></div>
-          </aside>
-        </div>
-        <div class="education-card glass-card">
-          <img src="images/cmu.png" alt="Carnegie Mellon University logo" />
-          <div>
-            <p class="card-kicker">Education</p>
-            <h3>Carnegie Mellon University</h3>
-            <p>B.S. in Computer Science · Minor in Business Administration</p>
+          <div class="app-body">
+            <p class="app-meta">iPhone · Mac · Self-hosted</p>
+            <h3>Orbit</h3>
+            <p>A self-hosted AI assistant that works with email, calendar, and reminders, and asks before it acts. Each user runs their own Cloudflare Workers and D1 backend; sends and edits wait for approval.</p>
+            <ul class="tags"><li>SwiftUI</li><li>TypeScript</li><li>Cloudflare Workers</li><li>D1</li></ul>
+            <a class="repo-link" href="https://github.com/ppratick/Orbit" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="education-meta"><strong>May 2027</strong><span>Dean's List, High Honors</span></div>
+        </article>
+
+        <div class="app-grid">
+          <article class="app glass" style="--tint: #2fbf71; --tint-2: #0f3d27;">
+            <div class="app-stage stage-phones stage-two">
+              <img class="phone" src="images/projects/tally-home.jpg" alt="Tally home screen with net balance and sample accounts" width="600" height="1304" loading="lazy" />
+              <img class="phone" src="images/projects/tally-insights.jpg" alt="Tally spending insights by category" width="600" height="1304" loading="lazy" />
+            </div>
+            <div class="app-body">
+              <p class="app-meta">iPhone · Widget · Self-hosted</p>
+              <h3>Tally</h3>
+              <p>A personal finance dashboard. A Cloudflare Worker syncs your own Plaid connections; the app shows balances, spending, and an optional AI chat.</p>
+              <ul class="tags"><li>SwiftUI</li><li>WidgetKit</li><li>TypeScript</li><li>Plaid</li></ul>
+              <a class="repo-link" href="https://github.com/ppratick/Tally" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="app glass" style="--tint: #6aa8ff; --tint-2: #1a2440;">
+            <div class="app-stage stage-phones stage-two">
+              <img class="phone" src="images/projects/splittab-trip.jpg" alt="SplitTab trip with participant balances" width="600" height="1304" loading="lazy" />
+              <img class="phone" src="images/projects/splittab-results.jpg" alt="SplitTab results showing each person's share" width="600" height="1304" loading="lazy" />
+            </div>
+            <div class="app-body">
+              <p class="app-meta">iPhone</p>
+              <h3>SplitTab</h3>
+              <p>Split receipts and track trip expenses with exact settlements: Decimal math and largest-remainder allocation, manual entry or optional AI receipt scanning.</p>
+              <ul class="tags"><li>SwiftUI</li><li>SwiftData</li><li>OpenAI API</li></ul>
+              <a class="repo-link" href="https://github.com/ppratick/SplitTab" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="app glass" style="--tint: #4f7dff; --tint-2: #151b2e;">
+            <div class="app-stage stage-desktop">
+              <img class="window" src="images/projects/hop-overview.png" alt="Hop's project overview with Git status and launch options" width="1100" height="817" loading="lazy" />
+              <img class="popover" src="images/projects/hop-menu.png" alt="Hop's menu-bar panel listing projects" width="600" height="916" loading="lazy" />
+            </div>
+            <div class="app-body">
+              <p class="app-meta">macOS menu bar</p>
+              <h3>Hop</h3>
+              <p>A menu-bar workspace for local projects: Git status and commits, dev services, and Xcode builds and installs in one place.</p>
+              <ul class="tags"><li>Swift</li><li>SwiftUI</li><li>AppKit</li></ul>
+              <a class="repo-link" href="https://github.com/ppratick/Hop" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="app glass" style="--tint: #8a7dff; --tint-2: #221d3d;">
+            <div class="app-stage stage-desktop stage-studysync">
+              <img class="window" src="images/projects/studysync-dashboard.jpg" alt="StudySync AI dashboard with sample courses and AI summaries" width="1400" height="899" loading="lazy" />
+              <img class="terminal" src="images/projects/studysync-cli.png" alt="StudySync command-line sync adding assignments to Reminders" width="1000" height="882" loading="lazy" />
+            </div>
+            <div class="app-body">
+              <p class="app-meta">macOS · Python</p>
+              <h3>StudySync AI</h3>
+              <p>Syncs Canvas assignments into Apple Reminders from a CLI or a local dashboard, with optional summaries from a local Ollama model.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>SQLite</li><li>Ollama</li></ul>
+              <a class="repo-link" href="https://github.com/ppratick/studySyncAI" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" aria-label="Experience">
-      <div class="section-content">
-        <div class="section-heading split-heading">
-          <div><p class="section-number">02 / Experience</p><h2>Where I've<br /><span>made an impact.</span></h2></div>
-          <p>From cloud performance to mentorship, I enjoy work where careful engineering creates visible results.</p>
-        </div>
-        <div class="timeline">
-          <article class="experience-row">
-            <div class="experience-date">May – Aug 2026</div><div class="timeline-marker"></div>
-            <div class="experience-card glass-card"><p class="card-kicker">Arm · Austin, TX</p><h3>Software Engineering Intern <span>Performance Engineering</span></h3><p>Automated OpenJDK performance comparisons with a GitLab CI pipeline that provisioned cloud test environments through Terraform and Ansible across AWS, Azure, GCP, and OCI. Benchmarked Java and Cassandra workloads and investigated anomalies with JVM and Linux telemetry.</p><div class="tag-list"><span>OpenJDK</span><span>Terraform</span><span>Ansible</span><span>Cloud</span></div></div>
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-label">02 — Systems projects</p>
+          <h2 id="projects-title">Systems projects.</h2>
+          <p class="section-intro">Course projects at Carnegie Mellon University. The code stays private under academic-integrity rules, but I'm glad to walk through the design.</p>
+        </header>
+        <div class="app-grid">
+          <article class="app glass" style="--tint: #2fd8a0; --tint-2: #0b2a24;">
+            <div class="app-stage stage-metric" aria-hidden="true">
+              <p class="stage-code"><b>send</b>(seq=41, win=[38..45])
+<i>ack</i>(40) → slide window
+<b>timeout</b>(42) → retransmit, backoff ×2
+miner-3 <i>lost</i> → reassign chunk 7</p>
+              <div class="stage-stats"><div><strong>10,000</strong><span>candidates per chunk</span></div><div><strong>0</strong><span>completed work lost</span></div></div>
+            </div>
+            <div class="app-body">
+              <p class="app-meta">Distributed systems · Go</p>
+              <h3>Reliable Messaging &amp; Distributed Mining</h3>
+              <p>Ordered, duplicate-free messaging over UDP with sliding windows, retransmission, and failure detection, plus a proof-of-work scheduler that reassigns work from failed miners without losing progress.</p>
+              <ul class="tags"><li>Go</li><li>UDP</li><li>Concurrency</li></ul>
+              <a class="repo-link" href="mailto:pkafley@andrew.cmu.edu?subject=Reliable%20Messaging%20project">Code private · Ask me about it <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
-          <article class="experience-row">
-            <div class="experience-date">May – Aug 2025</div><div class="timeline-marker"></div>
-            <div class="experience-card glass-card"><p class="card-kicker">Goalday · Remote</p><h3>Backend Software Engineering Intern</h3><p>Engineered Python and FastAPI services for OAuth, real-time user matching, recommendation workflows, and third-party integrations backed by MySQL. Built data pipelines using social content and AI embeddings for personalized recommendations.</p><div class="tag-list"><span>Python</span><span>FastAPI</span><span>MySQL</span><span>AI APIs</span></div></div>
+          <article class="app glass" style="--tint: #56dffc; --tint-2: #0b2133;">
+            <div class="app-stage stage-metric" aria-hidden="true">
+              <p class="stage-code"><b>malloc</b>(48) → class 4, split block
+<b>free</b>(p) → coalesce prev + next  <i>O(1)</i>
+heap check: boundary tags <i>ok</i></p>
+              <div class="stage-stats"><div><strong>10.93M</strong><span>ops / second</span></div><div><strong>72.1%</strong><span>heap utilization</span></div></div>
+            </div>
+            <div class="app-body">
+              <p class="app-meta">Systems · C</p>
+              <h3>Dynamic Memory Allocator</h3>
+              <p>A 64-bit heap allocator with 15 segregated free lists, boundary tags, and constant-time coalescing, verified across more than a million randomized operations.</p>
+              <ul class="tags"><li>C</li><li>Memory</li><li>Data Structures</li></ul>
+              <a class="repo-link" href="mailto:pkafley@andrew.cmu.edu?subject=Memory%20Allocator%20project">Code private · Ask me about it <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
-          <article class="experience-row">
-            <div class="experience-date">Apr 2025 – Present</div><div class="timeline-marker"></div>
-            <div class="experience-card glass-card"><p class="card-kicker">Curious Cardinals · Remote</p><h3>Full-Stack Development Mentor</h3><p>Mentor 10+ beginning programmers through designing, building, debugging, and deploying full-stack applications. Teach students to connect web interfaces to Flask or Express APIs, work with SQLite, and thoughtfully integrate Gemini or Ollama.</p><div class="tag-list"><span>Mentorship</span><span>Flask</span><span>Express</span><span>SQLite</span></div></div>
+          <article class="app glass" style="--tint: #6aa8ff; --tint-2: #111c33;">
+            <div class="app-stage stage-metric" aria-hidden="true">
+              <p class="stage-code">GET /index.html  → <i>cache hit</i>
+GET /logo.png    → origin, stream
+threads: 8 · LRU: <b>1 MiB</b> · mutex-guarded</p>
+              <div class="stage-stats"><div><strong>1 MiB</strong><span>thread-safe LRU cache</span></div><div><strong>HTTP/1.0</strong><span>concurrent proxy</span></div></div>
+            </div>
+            <div class="app-body">
+              <p class="app-meta">Networking · C</p>
+              <h3>Multithreaded HTTP Proxy</h3>
+              <p>An HTTP/1.0 proxy that forwards requests concurrently with POSIX threads and serves repeat requests from a thread-safe LRU cache.</p>
+              <ul class="tags"><li>C</li><li>POSIX Threads</li><li>Sockets</li></ul>
+              <a class="repo-link" href="mailto:pkafley@andrew.cmu.edu?subject=HTTP%20Proxy%20project">Code private · Ask me about it <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
-          <article class="experience-row">
-            <div class="experience-date">May – Jul 2025</div><div class="timeline-marker"></div>
-            <div class="experience-card glass-card"><p class="card-kicker">Carnegie Mellon University</p><h3>Eye-Tracking Undergraduate Researcher</h3><p>Designed psycholinguistics experiments and analyzed gaze data with Python and R to study how visual cues influence spoken-language comprehension. Prepared stimuli, calibrated equipment, and presented findings on attention and sentence interpretation.</p><div class="tag-list"><span>Python</span><span>R</span><span>Experiment Design</span></div></div>
+          <article class="app glass" style="--tint: #8a7dff; --tint-2: #1d1838;">
+            <div class="app-stage stage-metric" aria-hidden="true">
+              <p class="stage-code">attn = <b>softmax</b>(QKᵀ/√d + causal_mask)
+loss.backward()  <i># manual in NumPy</i>
+epoch 12 · val acc <b>0.9574</b></p>
+              <div class="stage-stats"><div><strong>95.74%</strong><span>MNIST validation</span></div><div><strong>GPT-2</strong><span>BPE tokenization</span></div></div>
+            </div>
+            <div class="app-body">
+              <p class="app-meta">Machine learning · Python</p>
+              <h3>ML Models from Scratch</h3>
+              <p>A decoder-only Transformer in PyTorch with causal multi-head attention and mixed-precision training, plus a NumPy network with manual backpropagation.</p>
+              <ul class="tags"><li>Python</li><li>PyTorch</li><li>NumPy</li></ul>
+              <a class="repo-link" href="mailto:pkafley@andrew.cmu.edu?subject=ML%20from%20Scratch%20project">Code private · Ask me about it <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="projects" aria-label="Projects">
-      <div class="section-content">
-        <div class="section-heading split-heading">
-          <div><p class="section-number">03 / Selected work</p><h2>Projects built to<br /><span>solve real problems.</span></h2></div>
-          <p>Systems, personal tools, and products that show how I think across systems and experiences.</p>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-label">03 — Experience</p>
+          <h2 id="experience-title">Where I've <span class="soft">made an impact.</span></h2>
+        </header>
+        <ol class="roles">
+          <li class="role">
+            <p class="role-date">May – Aug 2026</p>
+            <div class="role-card glass">
+              <p class="role-org">Arm · Austin, TX</p>
+              <h3>Software Engineering Intern, Performance Engineering</h3>
+              <p>Automated OpenJDK performance comparisons in GitLab CI, provisioning test environments with Terraform and Ansible across AWS, Azure, GCP, and OCI. Benchmarked Java and Cassandra workloads and traced anomalies with JVM and Linux telemetry.</p>
+            </div>
+          </li>
+          <li class="role">
+            <p class="role-date">May – Aug 2025</p>
+            <div class="role-card glass">
+              <p class="role-org">Goalday · Remote</p>
+              <h3>Backend Software Engineering Intern</h3>
+              <p>Built Python and FastAPI services for OAuth, real-time user matching, recommendations, and third-party integrations on MySQL, plus pipelines that use AI embeddings for personalization.</p>
+            </div>
+          </li>
+          <li class="role">
+            <p class="role-date">Apr 2025 – Present</p>
+            <div class="role-card glass">
+              <p class="role-org">Curious Cardinals · Remote</p>
+              <h3>Full-Stack Development Mentor</h3>
+              <p>Mentor 10+ beginning programmers as they design, build, debug, and deploy full-stack apps with Flask or Express, SQLite, and Gemini or Ollama.</p>
+            </div>
+          </li>
+          <li class="role">
+            <p class="role-date">May – Jul 2025</p>
+            <div class="role-card glass">
+              <p class="role-org">Carnegie Mellon University</p>
+              <h3>Undergraduate Researcher, Eye Tracking</h3>
+              <p>Designed psycholinguistics experiments and analyzed gaze data in Python and R to study how visual cues shape spoken-language comprehension.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-main glass">
+          <p class="section-label">04 — About</p>
+          <h2 id="about-title">Curious about <span class="soft">what's underneath.</span></h2>
+          <div class="about-copy">
+            <p>I like problems that need understanding all the way down, from the interface someone taps to the system carrying the work underneath it.</p>
+            <p>I'm a Computer Science student at Carnegie Mellon University, graduating in May 2027 with a minor in Business Administration and Dean's List, High Honors. Originally from Nepal and raised in Springfield, Massachusetts. Away from a screen, I'm usually playing soccer, swimming, or outdoors.</p>
+          </div>
+          <div class="edu">
+            <img src="images/cmu.png" alt="" width="500" height="500" loading="lazy" />
+            <div>
+              <p class="edu-name">Carnegie Mellon University</p>
+              <p class="edu-detail">B.S. Computer Science · Minor in Business Administration · May 2027</p>
+            </div>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card featured-project glass-card"><div class="project-topline"><span class="project-index">01</span><span class="privacy-label">Code private</span></div><h3>Reliable Messaging &amp; Distributed Mining</h3><p>Implemented ordered, duplicate-free messaging over UDP with sliding-window flow control, retransmission, backoff, and failure detection. Built a distributed proof-of-work scheduler over reliable messaging that splits searches into 10,000-candidate work chunks, prioritizes shortest remaining work, aggregates results, and automatically reassigns interrupted tasks after worker failures without discarding completed work.</p><div class="tag-list"><span>Go</span><span>UDP</span><span>Concurrency</span><span>Distributed Systems</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Reliable%20Messaging%20%26%20Distributed%20Mining%20project">Discuss this project</a></article>
-          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">02</span><span class="privacy-label">Code private</span></div><h3>Dynamic Memory Allocator</h3><p>Built a 64-bit heap allocator with 15 segregated free lists, boundary tags, block splitting, constant-time coalescing, and heap-integrity checks. Passed more than one million randomized operations while achieving 72.1% heap utilization.</p><div class="project-metric"><strong>10.93M</strong><span>operations / second</span></div><div class="tag-list"><span>C</span><span>Systems</span><span>Data Structures</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Dynamic%20Memory%20Allocator%20project">Discuss this project</a></article>
-          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">03</span><span class="privacy-label">Code private</span></div><h3>Multithreaded HTTP Proxy</h3><p>Implemented an HTTP/1.0 proxy that concurrently forwards requests and streams responses using POSIX threads and sockets. A mutex-protected 1 MiB LRU cache safely serves repeated requests across clients without returning to the origin server.</p><div class="tag-list"><span>C</span><span>POSIX Threads</span><span>Sockets</span><span>LRU Cache</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Multithreaded%20HTTP%20Proxy%20project">Discuss this project</a></article>
-          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">04</span><span class="privacy-label">Code private</span></div><h3>Machine Learning Models from Scratch</h3><p>Built a decoder-only Transformer in PyTorch with GPT-2 BPE tokenization, causal multi-head attention, tied embeddings, and mixed-precision training. Implemented a NumPy neural-network framework with manual backpropagation that reached 95.74% validation accuracy on MNIST, plus AlexNet and transfer-learning experiments with MobileNet.</p><div class="tag-list"><span>Python</span><span>PyTorch</span><span>NumPy</span><span>NLP</span><span>Computer Vision</span></div><a class="project-link" href="mailto:pkafley@andrew.cmu.edu?subject=Machine%20Learning%20Models%20from%20Scratch%20project">Discuss this project</a></article>
-          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">05</span><span class="public-label">Public repository</span></div><h3>SplitTab</h3><p>Built a SwiftUI iOS app for receipt splitting and trip expense tracking, with OpenAI vision extraction, editable line items, and shared-item assignment. Implemented multi-currency ledgers, payment tracking, and settlement calculations using Decimal arithmetic and largest-remainder allocation to reconcile every share exactly. Added local SwiftData persistence, validated backup restoration, and shareable settlement breakdowns.</p><div class="tag-list"><span>Swift</span><span>SwiftUI</span><span>SwiftData</span><span>OpenAI API</span><span>Financial Algorithms</span></div><a class="project-link" href="https://github.com/ppratick/SplitTab" target="_blank" rel="noopener noreferrer">View on GitHub</a></article>
-          <article class="project-card glass-card"><div class="project-topline"><span class="project-index">06</span><span class="public-label">Public repository</span></div><h3>StudySyncAI</h3><p>Built Python CLI and Flask workflows that sync Canvas assignments to Apple Reminders and persist course state in SQLite. Idempotent imports prevent duplicates, while optional local Ollama models generate summaries, time estimates, priorities, and workload insights without uploading course data.</p><div class="tag-list"><span>Python</span><span>Flask</span><span>SQLite</span><span>Ollama</span></div><a class="project-link" href="https://github.com/ppratick/studySyncAI" target="_blank" rel="noopener noreferrer">View on GitHub</a></article>
+        <div class="toolkit" aria-label="Toolkit">
+          <div class="tool-group glass"><h3>Languages</h3><p>C, C++, Python, Go, Java, JavaScript, TypeScript, SQL, Swift, Bash</p></div>
+          <div class="tool-group glass"><h3>Frameworks</h3><p>FastAPI, Flask, React, Node.js, Express, PyTorch, SwiftUI, SQLAlchemy</p></div>
+          <div class="tool-group glass"><h3>Cloud &amp; data</h3><p>AWS, Cloudflare Workers, Terraform, Ansible, GitLab CI/CD, Docker, Kubernetes, PostgreSQL, MySQL, Cassandra, Redis</p></div>
+          <div class="tool-group glass"><h3>Systems &amp; AI</h3><p>Linux, concurrency, TCP/UDP, POSIX threads, OpenJDK, JFR, GDB, Valgrind, OpenAI, Gemini, Ollama</p></div>
         </div>
       </div>
     </section>
 
-    <section id="skills" aria-label="Technical skills">
-      <div class="section-content">
-        <div class="section-heading"><p class="section-number">04 / Toolkit</p><h2>What I work with.</h2></div>
-        <div class="skills-grid">
-          <div class="skill-group glass-card"><span>01</span><h3>Languages</h3><p>C · C++ · Python · Go · Java · JavaScript · TypeScript · SQL · Swift · Bash</p></div>
-          <div class="skill-group glass-card"><span>02</span><h3>Frameworks</h3><p>FastAPI · Flask · React · Node.js · Express · PyTorch · SwiftUI · SQLAlchemy</p></div>
-          <div class="skill-group glass-card"><span>03</span><h3>Cloud & Data</h3><p>AWS · Terraform · Ansible · GitLab CI/CD · Docker · Kubernetes · PostgreSQL · MySQL · Cassandra · Redis</p></div>
-          <div class="skill-group glass-card"><span>04</span><h3>Systems & AI</h3><p>Linux · Concurrency · TCP/UDP · POSIX Threads · OpenJDK · JFR · GDB · Valgrind · OpenAI · Gemini · Ollama</p></div>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner glass">
+        <p class="section-label">05 — Contact</p>
+        <h2 id="contact-title">Let's talk.</h2>
+        <p class="contact-copy">Hiring for a role, working on something interesting, or curious how one of these projects works? Send a note. Email reaches me fastest, and I'm always happy to talk through design decisions.</p>
+        <div class="contact-links">
+          <a class="btn btn-solid btn-lg" href="mailto:pkafley@andrew.cmu.edu">pkafley@andrew.cmu.edu</a>
+          <a class="btn btn-ghost btn-lg" href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" aria-label="Contact">
-      <div class="section-content contact-shell glass-card">
-        <div class="contact-copy"><p class="section-number">05 / Contact</p><h2>Let's connect.</h2><p>Have a role, project, or question about one of my private repositories? Reach out directly and I'll get back to you.</p></div>
-        <div class="contact-options" aria-label="Contact options"><p>Find me online</p><a href="mailto:pkafley@andrew.cmu.edu"><span>Email</span><strong>pkafley@andrew.cmu.edu</strong></a><a href="https://linkedin.com/in/pratick-k" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/pratick-k</strong></a><a href="https://github.com/ppratick" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>github.com/ppratick</strong></a></div>
       </div>
     </section>
   </main>
-  <footer><p>Designed and built by Pratick Kafley <span>•</span> 2026</p></footer>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Pratick Kafley</p>
+      <p>Pittsburgh, PA</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

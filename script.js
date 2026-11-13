@@ -1,78 +1,51 @@
-const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('#main-nav-links');
-const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+const header = document.querySelector('.site-header');
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('#site-nav');
+const navLinks = [...document.querySelectorAll('#site-nav a[href^="#"]')];
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function setNavigationOpen(open) {
-  if (!hamburger || !navList) return;
-  hamburger.setAttribute('aria-expanded', String(open));
-  hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-  navList.classList.toggle('open', open);
+function setMenu(open) {
+  if (!toggle || !nav) return;
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  nav.classList.toggle('open', open);
+  document.body.classList.toggle('menu-open', open);
 }
 
-hamburger?.addEventListener('click', () => {
-  setNavigationOpen(hamburger.getAttribute('aria-expanded') !== 'true');
-});
+toggle?.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+navLinks.forEach((link) => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenu(false); });
+window.matchMedia('(min-width: 821px)').addEventListener('change', (event) => { if (event.matches) setMenu(false); });
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') setNavigationOpen(false);
-});
+const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 8);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => setNavigationOpen(false));
-});
+const sections = navLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
 
-const sections = [...document.querySelectorAll('main section[id]')];
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     navLinks.forEach((link) => {
-      link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      const active = link.getAttribute('href') === `#${entry.target.id}`;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
     });
   });
-}, { rootMargin: '-35% 0px -55%', threshold: 0 });
-
+}, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach((section) => sectionObserver.observe(section));
 
-if (!reducedMotion) {
-  const revealItems = document.querySelectorAll('.glass-card, .section-heading');
-  revealItems.forEach((item) => item.classList.add('reveal-item'));
-
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const items = document.querySelectorAll('.section-head, .app, .role, .tool-group, .facts, .contact-inner');
+  items.forEach((item) => item.classList.add('reveal'));
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
+      entry.target.classList.add('in');
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12 });
-
-  revealItems.forEach((item) => revealObserver.observe(item));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  items.forEach((item) => revealObserver.observe(item));
 }
-
-function typeHeroLine() {
-  const element = document.querySelector('.typed-line');
-  if (!element || reducedMotion) return;
-
-  const text = element.dataset.text || element.textContent.trim();
-  element.textContent = '';
-  let index = 0;
-
-  const typeNext = () => {
-    if (index < text.length) {
-      element.textContent += text.charAt(index);
-      index += 1;
-      window.setTimeout(typeNext, 38);
-      return;
-    }
-
-    const cursor = document.createElement('span');
-    cursor.className = 'cursor';
-    cursor.textContent = ' |';
-    cursor.style.animation = 'blink 1s infinite';
-    element.appendChild(cursor);
-  };
-
-  window.setTimeout(typeNext, 350);
-}
-
-window.addEventListener('load', typeHeroLine);

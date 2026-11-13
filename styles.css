@@ -216,7 +216,11 @@ ol, ul { padding: 0; list-style: none; }
 .role { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 8px 32px; align-items: start; }
 .role-date { padding-top: 26px; font-size: 13px; font-weight: 600; color: var(--muted); }
 .role-card { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 20px; align-items: start; padding: clamp(22px, 3vw, 30px); border-radius: var(--radius); }
-.role-logo { width: 52px; height: 52px; border-radius: 14px; background: #fff; object-fit: contain; box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 8px 20px rgba(0, 0, 0, .35); }
+.role-logo { width: 52px; height: 52px; border-radius: 14px; overflow: hidden; display: grid; place-items: center; box-shadow: 0 0 0 1px rgba(255, 255, 255, .1), 0 8px 20px rgba(0, 0, 0, .35); }
+.role-logo img { width: 100%; height: 100%; object-fit: cover; }
+.logo-arm { background: #060740; }
+.logo-arm img { width: 70%; height: auto; object-fit: contain; }
+.logo-cc img { transform: scale(1.42); }
 .role-org { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--green); }
 .role h3 { margin-top: 8px; font-size: 21px; font-weight: 700; line-height: 1.3; letter-spacing: -.03em; }
 .role-body > p:last-child { margin-top: 10px; color: var(--muted); font-size: 16px; }
